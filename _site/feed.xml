@@ -1,17 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-09T22:11:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to the Jungle</title><link href="http://localhost:4000/jekyll/update/2024/01/09/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to the Jungle" /><published>2024-01-09T13:39:26-05:00</published><updated>2024-01-09T13:39:26-05:00</updated><id>http://localhost:4000/jekyll/update/2024/01/09/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2024/01/09/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-09T22:21:09-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">API Futures | Platform Engineering Paves the Path for API Management and Governance</title><link href="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Paves the Path for API Management and Governance" /><published>2024-01-09T00:00:00-05:00</published><updated>2024-01-09T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/09/api-futures-platform-engineering</id><content type="html" xml:base="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html">&lt;h1 id=&quot;platform-engineering-paves-the-path-for-api-management-and-governance&quot;&gt;Platform Engineering Paves the Path for API Management and Governance&lt;/h1&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;By Tim Maguire&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;APIs are the building blocks of software.  They facilitate communication and data exchange between various software applications and services and are critical to any organization. However, as organizations create more and more APIs to meet their business needs, their API ecosystems become more complex and more challenging to manage. It’s becoming increasingly vital to reign in this API sprawl, where APIs grow organically with different implementations. This leads to inconsistent APIs, slower, more complex API development processes, and increases the risk of security flaws in your APIs.  Organizations need a more consistent API design and development process to combat this.  This is where a Platform Engineering program can help drive governance and oversight in the API development process.  This article is the first in a series detailing what a Platform Engineering team is, what they do, and their impact on API delivery outcomes.&lt;/p&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Building an API Platform Engineering program requires a strategic set of practices and patterns to streamline enterprise software delivery via designing, developing, testing, and maintaining an organization’s scalable ecosystem of APIs. These initiatives originated at companies like Google and Netflix with enormous developer teams, by providing an Internal Developer Platform (IDP) for developers that manage infrastructure, such as K8s, enabling more self-service so developers can focus on building applications that directly deliver business value. It’s sometimes called a “Paved Road,” meaning the platform engineering team provides a paved road for developers to deliver business value quickly via software and applications. A well-designed IDP will improve the overall developer experience for internal and external stakeholders by reducing friction, frustration, and cognitive load, ultimately leading to more predictable software delivery.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;API Platform Engineering encompasses the systematic design, development, deployment, and maintenance of an organization’s API ecosystem, including (Internal Developer Portal) IDPs, toolchains, and workflows. These capabilities support the self-service creation and consumption of APIs by various stakeholders, including developers, partners, and internal teams.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;When building the API Platform, we’ll keep four fundamental principles in mind:&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;ul&gt;
+  &lt;li&gt;Self-Service Empowerment&lt;/li&gt;
+  &lt;li&gt;Focus on Developer Experience (DevEX)&lt;/li&gt;
+  &lt;li&gt;Adopt a Product Mindset&lt;/li&gt;
+  &lt;li&gt;Constant monitoring and feedback&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These four principles allow for the paved road to developer happiness and better software delivery outcomes.&lt;/p&gt;
+
+&lt;p&gt;Developers like solving HARD problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be “hard” problems. When these tasks become “hard,” developer fatigue and burnout lead to lower-quality APIs, inefficient processes, churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.&lt;/p&gt;
+
+&lt;p&gt;However, setting up an API platform comes with its challenges. we must:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;balance openness and security&lt;/li&gt;
+  &lt;li&gt;ensure scalability to accommodate increasing API usage while versioning APIs and ensuring backward compatibility&lt;/li&gt;
+  &lt;li&gt;maintain consistency across APIs via governance and documentation to avoid confusion&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This series aims to provide a detailed exploration of API Platform Engineering. Along the way, we’ll:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Build an API Platform Maturity Model, which can be used to benchmark your organization&lt;/li&gt;
+  &lt;li&gt;how to get started on the platform engineering journey, starting with building the business&lt;/li&gt;
+  &lt;li&gt;Review team topologies&lt;/li&gt;
+  &lt;li&gt;Develop and prioritize a roadmap for implementation,&lt;/li&gt;
+  &lt;li&gt;Finish with monitoring and gathering feedback for future iterations.&lt;/li&gt;
+  &lt;li&gt;Review case studies of successful and unsuccessful implementations&lt;/li&gt;
+  &lt;li&gt;By the end of this series, you should understand what goes into a successful IDP, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This post is part of APIFutures, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed here.&lt;/p&gt;
+
+&lt;p&gt;Home&lt;/p&gt;</content><author><name></name></author><summary type="html">Platform Engineering Paves the Path for API Management and Governance</summary></entry></feed>
