@@ -1,46 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-10T16:11:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts</subtitle><entry><title type="html">API Futures | Platform Engineering Paves the Path for API Management and Governance</title><link href="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Paves the Path for API Management and Governance" /><published>2024-01-09T00:00:00-05:00</published><updated>2024-01-09T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/09/api-futures-platform-engineering</id><content type="html" xml:base="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html">&lt;h1 id=&quot;platform-engineering-paves-the-path-for-api-management-and-governance&quot;&gt;Platform Engineering Paves the Path for API Management and Governance&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-10T18:24:06-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">API Futures | Platform Engineering Paves the Path for API Management and Governance</title><link href="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Paves the Path for API Management and Governance" /><published>2024-01-09T00:00:00-05:00</published><updated>2024-01-09T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/09/api-futures-platform-engineering</id><content type="html" xml:base="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html">&lt;p&gt;&lt;strong&gt;By Tim Maguire&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;By Tim Maguire&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;When brainstorming topics for the &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;APIFutures&lt;/a&gt; project, one theme that stood out was Platform Engineering and its benefits to an organization.  I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery.  As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance.  Hope you enjoy this series, and I look forward to feedback to keep the discussion going.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;APIs are the building blocks of software.  They facilitate communication and data exchange between various software applications and services and are critical to any organization. However, as organizations create more and more APIs to meet their business needs, their API ecosystems become more complex and more challenging to manage. It’s becoming increasingly vital to reign in this API sprawl, where APIs grow organically with different implementations. This leads to inconsistent APIs, slower, more complex API development processes, and increases the risk of security flaws in your APIs.  Organizations need a more consistent API design and development process to combat this.  This is where a Platform Engineering program can help drive governance and oversight in the API development process.  This article is the first in a series detailing what a Platform Engineering team is, what they do, and their impact on API delivery outcomes.&lt;/p&gt;
 
-&lt;p&gt;Building an API Platform Engineering program requires a strategic set of practices and patterns to streamline enterprise software delivery via designing, developing, testing, and maintaining an organization’s scalable ecosystem of APIs. These initiatives originated at companies like Google and Netflix with enormous developer teams, by providing an Internal Developer Platform (IDP) for developers that manage infrastructure, such as K8s, enabling more self-service so developers can focus on building applications that directly deliver business value. It’s sometimes called a “Paved Road,” meaning the platform engineering team provides a paved road for developers to deliver business value quickly via software and applications. A well-designed IDP will improve the overall developer experience for internal and external stakeholders by reducing friction, frustration, and cognitive load, ultimately leading to more predictable software delivery.&lt;/p&gt;
+&lt;p&gt;Building a Platform Engineering program requires strategic practices and patterns to streamline enterprise software delivery.  These initiatives originated at companies like Google and Netflix with enormous developer teams.  There, the Platform Engineering (PE) team would provide tools, workflows, and best practices to internal developers.  This enables developers to focus on building applications and APIs that deliver direct business value without worrying about managing infrastructure, Kubernetes (K8s) configurations, or knowing which cloud to deploy to.&lt;/p&gt;
 
-&lt;p&gt;API Platform Engineering encompasses the systematic design, development, deployment, and maintenance of an organization’s API ecosystem, including (Internal Developer Portal) IDPs, toolchains, and workflows. These capabilities support the self-service creation and consumption of APIs by various stakeholders, including developers, partners, and internal teams.&lt;/p&gt;
+&lt;p&gt;Developers like solving hard problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be hard problems. When these tasks become hard, developer fatigue and burnout lead to lower-quality APIs, inefficient processes, employee churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.&lt;/p&gt;
 
-&lt;p&gt;When building the API Platform, we’ll keep four fundamental principles in mind:&lt;/p&gt;
+&lt;p&gt;This practice is sometimes called a Paved Path, meaning the platform engineering team provides a paved path for developers to deliver business value quickly.  &lt;a href=&quot;https://www.gartner.com/en/articles/what-is-platform-engineering&quot;&gt;Gartner&lt;/a&gt; forecasts that 80% of software organizations will have a platform team by 2026. According to &lt;a href=&quot;https://www.puppet.com/resources/state-of-platform-engineering&quot;&gt;Puppet&lt;/a&gt;, those organizations that have already instituted these practices have seen an increase of 68% in software delivery.  I like envisioning software releases as boring non-events; a platform team can help achieve this.&lt;/p&gt;
+
+&lt;p&gt;A well-designed platform focuses on four fundamental principles:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Self-Service Empowerment&lt;/li&gt;
-  &lt;li&gt;Focus on Developer Experience (DevEX)&lt;/li&gt;
-  &lt;li&gt;Adopt a Product Mindset&lt;/li&gt;
+  &lt;li&gt;Developer Experience (DX)&lt;/li&gt;
+  &lt;li&gt;Product Mindset&lt;/li&gt;
   &lt;li&gt;Constant monitoring and feedback&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;These four principles allow for the paved road to developer happiness and better software delivery outcomes.&lt;/p&gt;
-
-&lt;p&gt;Developers like solving HARD problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be “hard” problems. When these tasks become “hard,” developer fatigue and burnout lead to lower-quality APIs, inefficient processes, churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.&lt;/p&gt;
 
 &lt;p&gt;However, setting up an API platform comes with its challenges. we must:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;balance openness and security&lt;/li&gt;
-  &lt;li&gt;ensure scalability to accommodate increasing API usage while versioning APIs and ensuring backward compatibility&lt;/li&gt;
-  &lt;li&gt;maintain consistency across APIs via governance and documentation to avoid confusion&lt;/li&gt;
+  &lt;li&gt;Balance openness and security to ensure security standards are met with minimal friction&lt;/li&gt;
+  &lt;li&gt;Ensure scalability to accommodate increasing API usage while versioning APIs and ensuring backward compatibility&lt;/li&gt;
+  &lt;li&gt;Leverage API governance and documentation to maintain consistency across APIs&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This series aims to provide a detailed exploration of API Platform Engineering. Along the way, we’ll:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Build an API Platform Maturity Model, which can be used to benchmark your organization&lt;/li&gt;
-  &lt;li&gt;how to get started on the platform engineering journey, starting with building the business&lt;/li&gt;
+  &lt;li&gt;Getting started on the platform engineering journey, starting with building the business&lt;/li&gt;
   &lt;li&gt;Review team topologies&lt;/li&gt;
   &lt;li&gt;Develop and prioritize a roadmap for implementation,&lt;/li&gt;
   &lt;li&gt;Finish with monitoring and gathering feedback for future iterations.&lt;/li&gt;
   &lt;li&gt;Review case studies of successful and unsuccessful implementations&lt;/li&gt;
-  &lt;li&gt;By the end of this series, you should understand what goes into a successful IDP, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This post is part of APIFutures, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed here.&lt;/p&gt;
+&lt;p&gt;By the end of this series, my goal is that you understand what goes into building a thriving platform team, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.&lt;/p&gt;
 
-&lt;p&gt;Home&lt;/p&gt;</content><author><name></name></author><summary type="html">Platform Engineering Paves the Path for API Management and Governance</summary></entry></feed>
+&lt;p&gt;Thanks for reading.  I would love to hear from you for any feedback.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;This post is part of &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;APIFutures&lt;/a&gt;, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">By Tim Maguire</summary></entry></feed>

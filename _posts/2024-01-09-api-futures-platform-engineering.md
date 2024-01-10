@@ -3,49 +3,51 @@ layout: post
 title:  "API Futures | Platform Engineering Paves the Path for API Management and Governance"
 date: 2024-01-09 
 ---
-# Platform Engineering Paves the Path for API Management and Governance 
 
 **By Tim Maguire**
 
+>_When brainstorming topics for the [APIFutures](https://matthewreinbold.github.io/APIFutures/index.html) project, one theme that stood out was Platform Engineering and its benefits to an organization.  I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery.  As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance.  Hope you enjoy this series, and I look forward to feedback to keep the discussion going._
+
 APIs are the building blocks of software.  They facilitate communication and data exchange between various software applications and services and are critical to any organization. However, as organizations create more and more APIs to meet their business needs, their API ecosystems become more complex and more challenging to manage. It’s becoming increasingly vital to reign in this API sprawl, where APIs grow organically with different implementations. This leads to inconsistent APIs, slower, more complex API development processes, and increases the risk of security flaws in your APIs.  Organizations need a more consistent API design and development process to combat this.  This is where a Platform Engineering program can help drive governance and oversight in the API development process.  This article is the first in a series detailing what a Platform Engineering team is, what they do, and their impact on API delivery outcomes.
 
-Building an API Platform Engineering program requires a strategic set of practices and patterns to streamline enterprise software delivery via designing, developing, testing, and maintaining an organization's scalable ecosystem of APIs. These initiatives originated at companies like Google and Netflix with enormous developer teams, by providing an Internal Developer Platform (IDP) for developers that manage infrastructure, such as K8s, enabling more self-service so developers can focus on building applications that directly deliver business value. It’s sometimes called a “Paved Road,” meaning the platform engineering team provides a paved road for developers to deliver business value quickly via software and applications. A well-designed IDP will improve the overall developer experience for internal and external stakeholders by reducing friction, frustration, and cognitive load, ultimately leading to more predictable software delivery.
+Building a Platform Engineering program requires strategic practices and patterns to streamline enterprise software delivery.  These initiatives originated at companies like Google and Netflix with enormous developer teams.  There, the Platform Engineering (PE) team would provide tools, workflows, and best practices to internal developers.  This enables developers to focus on building applications and APIs that deliver direct business value without worrying about managing infrastructure, Kubernetes (K8s) configurations, or knowing which cloud to deploy to.
 
-API Platform Engineering encompasses the systematic design, development, deployment, and maintenance of an organization's API ecosystem, including (Internal Developer Portal) IDPs, toolchains, and workflows. These capabilities support the self-service creation and consumption of APIs by various stakeholders, including developers, partners, and internal teams.
+Developers like solving hard problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be hard problems. When these tasks become hard, developer fatigue and burnout lead to lower-quality APIs, inefficient processes, employee churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.
 
-When building the API Platform, we’ll keep four fundamental principles in mind:
+This practice is sometimes called a Paved Path, meaning the platform engineering team provides a paved path for developers to deliver business value quickly.  [Gartner](https://www.gartner.com/en/articles/what-is-platform-engineering) forecasts that 80% of software organizations will have a platform team by 2026. According to [Puppet](https://www.puppet.com/resources/state-of-platform-engineering), those organizations that have already instituted these practices have seen an increase of 68% in software delivery.  I like envisioning software releases as boring non-events; a platform team can help achieve this. 
+
+A well-designed platform focuses on four fundamental principles:
 
 
 
 * Self-Service Empowerment
-* Focus on Developer Experience (DevEX)
-* Adopt a Product Mindset
+* Developer Experience (DX)
+* Product Mindset
 * Constant monitoring and feedback
-
-These four principles allow for the paved road to developer happiness and better software delivery outcomes.
-
-Developers like solving HARD problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be “hard” problems. When these tasks become “hard,” developer fatigue and burnout lead to lower-quality APIs, inefficient processes, churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.
 
 However, setting up an API platform comes with its challenges. we must:
 
 
 
-* balance openness and security
-* ensure scalability to accommodate increasing API usage while versioning APIs and ensuring backward compatibility
-* maintain consistency across APIs via governance and documentation to avoid confusion
+* Balance openness and security to ensure security standards are met with minimal friction
+* Ensure scalability to accommodate increasing API usage while versioning APIs and ensuring backward compatibility
+* Leverage API governance and documentation to maintain consistency across APIs 
 
 This series aims to provide a detailed exploration of API Platform Engineering. Along the way, we’ll:
 
 
 
 * Build an API Platform Maturity Model, which can be used to benchmark your organization
-* how to get started on the platform engineering journey, starting with building the business
+* Getting started on the platform engineering journey, starting with building the business
 * Review team topologies
 * Develop and prioritize a roadmap for implementation,
 * Finish with monitoring and gathering feedback for future iterations.
 * Review case studies of successful and unsuccessful implementations
-* By the end of this series, you should understand what goes into a successful IDP, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.
 
-This post is part of APIFutures, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed here.
+By the end of this series, my goal is that you understand what goes into building a thriving platform team, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.
 
-Home
+Thanks for reading.  I would love to hear from you for any feedback.
+
+>_This post is part of [APIFutures](https://matthewreinbold.github.io/APIFutures/index.html), a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed [here](https://matthewreinbold.github.io/APIFutures/index.html)._
+
+[Home](/)

@@ -21,22 +21,26 @@
 title: Tim Maguire
 email: tim&#64;tmaguire&#46;net
 description: >- # this means to ignore newlines until "baseurl:"
-  Tim Maguire's writing and thoughts
+  Tim Maguire's writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fluffhead-tim.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: tmaguire720
 github_username:  fluffhead-tim
+mastodon_username: TimMaguire@hachyderm.io
+linkedin_username: tmaguire720
+twitter_username: tmaguire720
+
+#social_links:
+#  - { platform: github,  user_url: "https://github.com/fluffhead-tim" }
+#  - { platform: twitter, user_url: "https://twitter.com/tmaguire720" }
+
+#add google analytics
+google_analytics: G-580E99WPK1
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-analytics
 
-jekyll_analyticsj:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: G-580E99WPK1          # Required - replace with your tracking id
-    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
 
 # Exclude from processing.
 # The following items will not be processed, by default.
