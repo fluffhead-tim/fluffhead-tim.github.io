@@ -30,7 +30,7 @@ mastodon:
    instance: hachyderm.io
 
 
-linkedin_username: tmaguire720
+linkedin_username: tmaguire
 #twitter_username: tmaguire720
 #  {%- for mst in site.mastodon -%}{%- if mst.username and mst.instance -%}<li><a href="https://{{ mst.instance| cgi_escape | escape}}/@{{mst.username}}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use></svg> <span class="username">{{ mst.username|escape }}</span></a></li>{%- endif -%}{%- endfor -%}
 
