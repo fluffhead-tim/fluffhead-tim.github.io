@@ -46,8 +46,7 @@ By the end of this series, my goal is that you understand what goes into buildin
 
 Thanks for reading.  I would love to hear from you if you have any feedback.
 
-
-    _This post is part of [API Futures](https://matthewreinbold.github.io/APIFutures/index.html), a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed [here](https://matthewreinbold.github.io/APIFutures/index.html)._
+> _This post is part of [API Futures](https://matthewreinbold.github.io/APIFutures/index.html), a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed [here](https://matthewreinbold.github.io/APIFutures/index.html)._
 
 
 [Home](/)

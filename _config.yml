@@ -34,7 +34,7 @@ twitter_username: tmaguire720
 #  - { platform: twitter, user_url: "https://twitter.com/tmaguire720" }
 
 #add google analytics
-#google_analytics: G-580E99WPK1
+google_analytics: G-580E99WPK1
 
 # Build settings
 theme: minima
