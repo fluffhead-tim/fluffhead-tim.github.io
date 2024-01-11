@@ -38,7 +38,7 @@ This series aims to provide a detailed exploration of API Platform Engineering. 
 
 
 * Build an API Platform Maturity Model, which can be used to benchmark your organization
-* Getting started on the platform engineering journey, starting with building the business
+* Getting started on the platform engineering journey, starting with building the business case
 * Review team topologies
 * Develop and prioritize a roadmap for implementation,
 * Finish with monitoring and gathering feedback for future iterations.
