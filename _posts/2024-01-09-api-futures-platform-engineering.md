@@ -4,8 +4,6 @@ title:  "API Futures | Platform Engineering Paves the Path for API Management an
 date: 2024-01-09 
 ---
 
-**By Tim Maguire**
-
 >_When brainstorming topics for the [API Futures](https://matthewreinbold.github.io/APIFutures/index.html) initiative, one theme that stood out was Platform Engineering and its benefits to an organization.  I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery.  As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance.  This first post introduces the problems a Platform Engineering team can solve and provides a sneak peek of the series.  Hope you enjoy this post and return for the rest of the series. I look forward to feedback to keep the discussion going._
 
 APIs are the building blocks of software.  They facilitate communication and data exchange between various software applications and services and are critical to any organization. However, as organizations create more APIs to meet their business needs, their API ecosystems become complex and challenging to manage. This leads to inconsistent APIs, slower and more complex API development processes, and increases the risk of security flaws in your APIs.  Organizations need a consistent API design and development process to combat this.  It’s vital to reign in this API sprawl, where APIs grow organically with different implementations. This is where a Platform Engineering program can help drive governance and oversight in the API development process.  
