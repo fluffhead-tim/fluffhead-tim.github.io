@@ -34,13 +34,15 @@ twitter_username: tmaguire720
 #  - { platform: twitter, user_url: "https://twitter.com/tmaguire720" }
 
 #add google analytics
-google_analytics: G-580E99WPK1
+#google_analytics: G-580E99WPK1
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
+#show an excerpt on the home page:
+show_excerpts: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
