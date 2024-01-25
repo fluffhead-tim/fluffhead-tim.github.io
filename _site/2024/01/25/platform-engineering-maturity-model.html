@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>API Futures Platform Engineering Maturity Model | Tim Maguire</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="API Futures Platform Engineering Maturity Model" />
+<meta name="author" content="Tim Maguire" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the second post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In this post, we’ll dive into a Platform Engineering Maturity Model." />
+<meta property="og:description" content="This is the second post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In this post, we’ll dive into a Platform Engineering Maturity Model." />
+<link rel="canonical" href="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html" />
+<meta property="og:url" content="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html" />
+<meta property="og:site_name" content="Tim Maguire" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="API Futures Platform Engineering Maturity Model" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tim Maguire"},"dateModified":"2024-01-25T00:00:00-05:00","datePublished":"2024-01-25T00:00:00-05:00","description":"This is the second post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In this post, we’ll dive into a Platform Engineering Maturity Model.","headline":"API Futures Platform Engineering Maturity Model","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html"},"url":"http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tim Maguire" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tim Maguire</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">API Futures | Platform Engineering Maturity Model</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-01-25T00:00:00-05:00" itemprop="datePublished">Jan 25, 2024
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Tim Maguire</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This is the second post in my Platform Engineering Paves the Path for API Management and Governance series.  In the <a href="/2024/01/09/api-futures-platform-engineering.html">first post</a>, I provided a high-level overview of Platform Engineering and how it can help API governance.  In this post, we’ll dive into a Platform Engineering Maturity Model.</p>
+
+<p>Organizations use a maturity model framework to assess and measure the capabilities of a process or program to gauge where they are today and plot a course or roadmap of where they want to go by identifying specific areas in which to invest.  A traditional maturity model consists of four phases: Initial, Managed, Defined, and Optimizing.</p>
+
+<table>
+  <tr>
+   <th>Phase
+   </th>
+   <th>Description
+   </th>
+  </tr>
+  <tr>
+   <td>0 - Initial
+   </td>
+   <td>Ad hoc, unpredictable
+   </td>
+  </tr>
+  <tr>
+   <td>1 - Managed
+   </td>
+   <td>Defined process in some areas
+   </td>
+  </tr>
+  <tr>
+   <td>2 - Defined
+   </td>
+   <td>Defined process for organization, proactive
+   </td>
+  </tr>
+  <tr>
+   <td>3 - Optimizing
+   </td>
+   <td>Processes are measured, controlled, and focus on improvement
+   </td>
+  </tr>
+</table>
+
+<p>Let’s look at these phases within the context of a platform engineering team.</p>
+
+<h3 id="phase-0---initial-or-pure-chaos">Phase 0 - Initial or Pure Chaos.</h3>
+
+<p>Developers might be productive in pockets, but it’s inconsistent and unpredictable.  Individual teams within the organization may have different processes and rigor regarding software development and delivery.</p>
+
+<p>Teams don’t have great insights into how the overall system performs; triaging and resolving system outages is more reactionary.  After an incident, the team documents the root cause. However, they tend to put the solution on an ambiguous backlog with no apparent owner rather than fixing it immediately before they move to the next problem.</p>
+
+<p>Because there is no process, API designs – if there are any – become inconsistent from API to API and team to team.  Developers implement interfaces differently from team to team and even from API to API within the same team.  When designing an API, a team might spend excessive effort components that could be reusable, such as pagination.  Teams might reimplement an existing API slightly differently because there is a lack of API documentation and discovery.</p>
+
+<p>Here are some critical steps an organization can take to move up to the Developing phase:</p>
+
+<ul>
+  <li>Identify a Platform Team – ideally, this should be a team of developers focused solely on the platform and improving the development experience.</li>
+  <li>Work with Stakeholders to identify priorities and concerns – the platform team should interview nearly every developer and product development leader to understand the key things keeping them up at night.</li>
+  <li>Prioritize and Build a Thinnest Viable Product (TVP) – based on the feedback, identify the critical problems to solve and map them to outcomes.  This includes defining success criteria in the form of metrics.</li>
+  <li>Socialize outcomes – it’s crucial to celebrate wins and share the TVP and success outcomes with the rest of the organization.  This will build credibility within the organization, which is needed for later phases.</li>
+</ul>
+
+<p>Example:  Developers start grumbling about their tooling or a process within the organization.  A platform team member interviews developers to understand their pain points, how many developers this impacts, and the pain frequency.  With this quantifiable data, the platform team can work on solving these pain points as the first iteration of the TVP, paving their path to the next phase - Managed.</p>
+
+<h3 id="phase-1---managed-or-controlled-chaos">Phase 1 - Managed or Controlled Chaos</h3>
+
+<p>The TVP is in place, and a platform team exists.  The TVP might vary from a simple wiki with some process documentation to a list of identified services and their documentation.  The platform team owns the ambiguous backlog from phase 0. However, there isn’t a clear roadmap or plan to execute on the roadmap.  It can be best described as a list of divergent technical debt issues to solve.</p>
+
+<p>A delicate balance must be struck here as the adoption of the TVP is limited to a small segment of teams or use cases.  Some teams might view this as a success, while others that don’t yet leverage the benefits might see the platform team as overhead until their use cases are covered.  The platform team will start introducing more tooling to the TVP (at this point, we can retire the term) to cover these additional use cases, bringing more teams on board the platform.</p>
+
+<p>In terms of an API program, organizations at this phase will become more formalized in their API design and development processes.  The platform team introduces internal or third-party tooling to the ecosystem to support API use cases.  The platform provides OpenAPI templates, scaffolding, and documented standards to jump-start API design, development, and testing.</p>
+
+<p>Moving from this phase to the Defined phase requires a push-to-pull paradigm shift within an organization, meaning developers will start looking to the platform team to solve many of their problems.  Key steps to move to the next phase include:</p>
+
+<ul>
+  <li>Build out the Platform Team – consider adding product managers, solution architects, and evangelists.</li>
+  <li>Use case expansion – identify bottlenecks that can be automated, such as CI/CD.</li>
+  <li>Systematic feedback – regular surveys and conversations rolled into the roadmap.</li>
+  <li>Transparent roadmap – the platform product manager must share feedback and the roadmap with the rest of the development team and key stakeholders.</li>
+  <li>Software delivery metrics – define, measure, and report on software delivery performance using DORA metrics.</li>
+</ul>
+
+<p>Example:  The platform team wants to capture more data automatically, for instance, lead time, so they instrument the build process.  They document and provide scripts for all the development teams to start collecting this data.  Two issues arise: 1) differences in builds from team to team prevent the scripts from being fully adopted, and 2) there are critical steps in the lead time process – PR reviews – that are not being fully calculated in this metric.  As the platform team looks to address these issues, they will start the journey to the next phase – Defined.</p>
+
+<h3 id="phase-2--defined-or-scaling-beyond-the-chaos">Phase 2 – Defined or Scaling Beyond the Chaos</h3>
+
+<p>There is no more chaos at this phase, and the platform begins to scale across the organization.  The organization manages the platform like its external-facing products – staffed with an entire product team, published roadmap, and KPIs regularly reported to the organization along with standard financial metrics.</p>
+
+<p>Development teams choose to use the platform’s capabilities because of its value and less because of organizational mandates.  Developers quickly spin up preconfigured environments and infrastructure based on their needs, knowing these common toolsets are uniform across the organization.  Updates made to test environments by the platform team are pulled into the new environments.</p>
+
+<p>For APIs, governance and standards are in place for common naming conventions, interfaces, and patterns.  Guardrails are automated and built into a developer workflow.  Developers only need to think about the capabilities of their APIs rather than the overall design, as much of the boilerplate definition is already there.</p>
+
+<p>Steps to the final phase, Optimizing:</p>
+
+<ul>
+  <li>Platform adoption – internal and external teams besides engineering begin to leverage the platform.</li>
+  <li>Organizational buy-in – DORA metrics become the organization’s everyday language and are referenced just as financial metrics.</li>
+  <li>Decentralized platform ownership – the platform team still exists; however, additional capabilities are built and contributed back to the platform for organizational-wide adoption.</li>
+</ul>
+
+<p>Example: Even with OpenAPI templates, developer teams need help to design APIs as much of their cognitive load is spent learning the intricacies of OpenAPI and ensuring their API designs meet the organizational standards.  The platform team builds tooling that reduces the designer’s exposure to OpenAPI and automates the design to adhere to the organization’s API standards.  Now, API designers only need to think about the use cases of the API and not additional tooling such as linters.  As more and more API designers use this tooling across the organization, the path is paved to move to Phase 3 - Optimizing.</p>
+
+<h3 id="phase-3---optimizing-or-the-holy-grail">Phase 3 - Optimizing or “The Holy Grail”</h3>
+
+<p>In the most mature phase, Optimizing, the platform becomes part of the larger development ecosystem and is a crucial differentiator for the organization.  Note the “-ing” at this phase; organizations never really leave this phase as they continue to evolve and iterate on their platform as new products and technical capabilities are introduced.</p>
+
+<p>Organizations in this phase provide self-service capabilities for developers. This gives the development team the autonomy to make decisions while providing the required organizational guardrails – security, compliance, costs, and standards.  This combination enables developers to focus on delivering innovation and business value as quickly as possible.</p>
+
+<p>The platform is instrumented for constant feedback and monitoring – the platform team understand the usage patterns and can quickly identify points of friction.  It’s these friction points that continue to evolve and make the platform more robust for the development teams.  This efficiency is realized in delightful experiences beyond ones just built for developers.  For instance, onboarding new users, customers, or partners – tasks that once took heroics and weeks or months of time – are now be automated with a push of a button.</p>
+
+<hr />
+
+<p>My next post will focus on getting executive buy-in for a Platform Engineering effort.  This is the most critical piece in this series, as tech is always the easy part, but getting buy-in and funding are the biggest challenges.</p>
+
+<p>Thank you for reading this far. I would love to hear from you about your experiences and where you think your organization sits on the maturity model. I would also like to discuss how you can move your organization forward.  What are some platform success stories? Failures?  My contact information is in the footer.</p>
+
+<hr />
+
+<blockquote>
+  <p><em>This post is part of <a href="https://matthewreinbold.github.io/APIFutures/index.html">APIFutures</a>, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed <a href="https://matthewreinbold.github.io/APIFutures/index.html">here</a>.</em></p>
+</blockquote>
+
+<p><a href="/">Home</a></p>
+
+  </div><a class="u-url" href="/2024/01/25/platform-engineering-maturity-model.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tim Maguire</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tim Maguire</li><li><a class="u-email" href="mailto:tim&#64;tmaguire&#46;net">tim&#64;tmaguire&#46;net</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fluffhead-tim"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fluffhead-tim</span></a></li><li><a href="https://www.linkedin.com/in/tmaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">tmaguire</span></a></li><li><a href="https://hachyderm.io/@TimMaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">TimMaguire</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Tim Maguire&#39;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
