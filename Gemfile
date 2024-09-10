@@ -9,6 +9,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 # gem "jekyll", "~> 4.3.3"
 # gem "jekyll", "~> 5.0.4"
+gem "jekyll", "~> 3.10"
+
 # Ensure that the WEBrick server is available for this environment
 gem 'webrick'
 # add google analytics
