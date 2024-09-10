@@ -1,167 +1,368 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-25T11:06:56-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">API Futures | Platform Engineering Maturity Model</title><link href="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Maturity Model" /><published>2024-01-25T00:00:00-05:00</published><updated>2024-01-25T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/25/platform-engineering-maturity-model</id><content type="html" xml:base="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html">&lt;p&gt;This is the second post in my Platform Engineering Paves the Path for API Management and Governance series.  In the &lt;a href=&quot;/2024/01/09/api-futures-platform-engineering.html&quot;&gt;first post&lt;/a&gt;, I provided a high-level overview of Platform Engineering and how it can help API governance.  In this post, we’ll dive into a Platform Engineering Maturity Model.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-10T11:50:32-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">API Futures | API Product Manager Onboarding Guide</title><link href="http://localhost:4000/2024/09/10/api-product-manager-onboarding-guide.html" rel="alternate" type="text/html" title="API Futures | API Product Manager Onboarding Guide" /><published>2024-09-10T00:00:00-04:00</published><updated>2024-09-10T00:00:00-04:00</updated><id>http://localhost:4000/2024/09/10/api-product-manager-onboarding-guide</id><content type="html" xml:base="http://localhost:4000/2024/09/10/api-product-manager-onboarding-guide.html"><![CDATA[<p>Congratulations on your new role as an API Product Manager! It’s an exciting opportunity to shape an organization’s API strategy and governance. Once the dopamine of the LinkedIn likes and congratulations reactions wear off, it’s time to dive into the essentials of your role. Here’s a framework to help you thoughtfully onboard and make an impact.</p>
 
-&lt;p&gt;Organizations use a maturity model framework to assess and measure the capabilities of a process or program to gauge where they are today and plot a course or roadmap of where they want to go by identifying specific areas in which to invest.  A traditional maturity model consists of four phases: Initial, Managed, Defined, and Optimizing.&lt;/p&gt;
+<h3 id="onboarding-framework-for-api-product-managers"><strong>Onboarding Framework for API Product Managers</strong></h3>
 
-&lt;table&gt;
-  &lt;tr&gt;
-   &lt;th&gt;Phase
-   &lt;/th&gt;
-   &lt;th&gt;Description
-   &lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td&gt;0 - Initial
-   &lt;/td&gt;
-   &lt;td&gt;Ad hoc, unpredictable
-   &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td&gt;1 - Managed
-   &lt;/td&gt;
-   &lt;td&gt;Defined process in some areas
-   &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td&gt;2 - Defined
-   &lt;/td&gt;
-   &lt;td&gt;Defined process for organization, proactive
-   &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td&gt;3 - Optimizing
-   &lt;/td&gt;
-   &lt;td&gt;Processes are measured, controlled, and focus on improvement
-   &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+<p>Many new Product Managers feel the urge to prove their value quickly by delivering new features within the first 30 days. However, it’s crucial to first understand your organization’s unique landscape before diving into the backlog. Here’s a structured approach to guide your first 30-60 days, focusing on understanding the existing environment and laying a solid foundation before building your roadmap.</p>
 
-&lt;p&gt;Let’s look at these phases within the context of a platform engineering team.&lt;/p&gt;
+<h4 id="1-understand-the-existing-api-landscape"><strong>1. Understand the Existing API Landscape</strong></h4>
 
-&lt;h3 id=&quot;phase-0---initial-or-pure-chaos&quot;&gt;Phase 0 - Initial or Pure Chaos.&lt;/h3&gt;
+<p>Start by meeting key stakeholders to identify and catalog all existing APIs, along with their owners, consumers, and the purpose of each service. If you’re a visual thinker like me, consider mapping these APIs onto a workflow digram and organizational chart. This exercise will give you a holistic view of the API ecosystem, enabling you to understand interdependencies and identify potential gaps or overlaps.</p>
 
-&lt;p&gt;Developers might be productive in pockets, but it’s inconsistent and unpredictable.  Individual teams within the organization may have different processes and rigor regarding software development and delivery.&lt;/p&gt;
+<h4 id="2-develop-metrics"><strong>2. Develop Metrics</strong></h4>
 
-&lt;p&gt;Teams don’t have great insights into how the overall system performs; triaging and resolving system outages is more reactionary.  After an incident, the team documents the root cause. However, they tend to put the solution on an ambiguous backlog with no apparent owner rather than fixing it immediately before they move to the next problem.&lt;/p&gt;
+<p>Collaborate with teams to establish Key Performance Indicators (KPIs) or Service Level Objectives (SLOs) for API performance and governance. Key metrics might include uptime, latency, error rates, compliance adherence, and security incidents. Even if it’s just the first step, measuring these data points will provide invaluable insights into where improvements are needed.</p>
 
-&lt;p&gt;Because there is no process, API designs – if there are any – become inconsistent from API to API and team to team.  Developers implement interfaces differently from team to team and even from API to API within the same team.  When designing an API, a team might spend excessive effort components that could be reusable, such as pagination.  Teams might reimplement an existing API slightly differently because there is a lack of API documentation and discovery.&lt;/p&gt;
+<h4 id="3-establish-a-governance-framework"><strong>3. Establish a Governance Framework</strong></h4>
 
-&lt;p&gt;Here are some critical steps an organization can take to move up to the Developing phase:&lt;/p&gt;
+<p>Work with stakeholders to document and socialize a governance framework that includes best API design, security, and lifecycle management practices. Ensure all relevant teams are involved in crafting this framework to foster buy-in and ensure that it’s practical and enforceable. If no framework exists, start small and build on it incrementally.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Identify a Platform Team – ideally, this should be a team of developers focused solely on the platform and improving the development experience.&lt;/li&gt;
-  &lt;li&gt;Work with Stakeholders to identify priorities and concerns – the platform team should interview nearly every developer and product development leader to understand the key things keeping them up at night.&lt;/li&gt;
-  &lt;li&gt;Prioritize and Build a Thinnest Viable Product (TVP) – based on the feedback, identify the critical problems to solve and map them to outcomes.  This includes defining success criteria in the form of metrics.&lt;/li&gt;
-  &lt;li&gt;Socialize outcomes – it’s crucial to celebrate wins and share the TVP and success outcomes with the rest of the organization.  This will build credibility within the organization, which is needed for later phases.&lt;/li&gt;
-&lt;/ul&gt;
+<h4 id="4-create-a-centralized-api-catalog"><strong>4. Create a Centralized API Catalog</strong></h4>
 
-&lt;p&gt;Example:  Developers start grumbling about their tooling or a process within the organization.  A platform team member interviews developers to understand their pain points, how many developers this impacts, and the pain frequency.  With this quantifiable data, the platform team can work on solving these pain points as the first iteration of the TVP, paving their path to the next phase - Managed.&lt;/p&gt;
+<p>Develop a business-focused API catalog that includes comprehensive documentation, use cases, getting-started guides, sample code, SDKs, and versioning information. Organize it with non-technical users in mind to ensure that it’s accessible to everyone within the organization.</p>
 
-&lt;h3 id=&quot;phase-1---managed-or-controlled-chaos&quot;&gt;Phase 1 - Managed or Controlled Chaos&lt;/h3&gt;
+<h3 id="key-meetings-in-your-first-30-days"><strong>Key Meetings in Your First 30 Days</strong></h3>
 
-&lt;p&gt;The TVP is in place, and a platform team exists.  The TVP might vary from a simple wiki with some process documentation to a list of identified services and their documentation.  The platform team owns the ambiguous backlog from phase 0. However, there isn’t a clear roadmap or plan to execute on the roadmap.  It can be best described as a list of divergent technical debt issues to solve.&lt;/p&gt;
+<p>Your first 30 days should be focused on meeting with various stakeholders across the organization. The insights you gather will be crucial for shaping your API strategy. Key stakeholders include:</p>
 
-&lt;p&gt;A delicate balance must be struck here as the adoption of the TVP is limited to a small segment of teams or use cases.  Some teams might view this as a success, while others that don’t yet leverage the benefits might see the platform team as overhead until their use cases are covered.  The platform team will start introducing more tooling to the TVP (at this point, we can retire the term) to cover these additional use cases, bringing more teams on board the platform.&lt;/p&gt;
+<ul>
+  <li><strong>Engineering Teams:</strong>
+    <ul>
+      <li>Goal: Understand the API architecture, technical challenges, and development processes.</li>
+      <li>Gather details on existing APIs, their business value, versioning and deprecation strategies, and the development lifecycle. Assess the tools and processes used for API development, testing, monitoring, and documentation.</li>
+      <li>Discuss any security or compliance requirements (e.g., HIPAA, GDPR) and how these are addressed.</li>
+      <li>Identify challenges related to API security, scalability, and performance, reviewing post-mortems from recent outages or incidents to gain insights.</li>
+    </ul>
+  </li>
+  <li><strong>API Consumers (e.g., Business Unit Leaders):</strong>
+    <ul>
+      <li>Goal: Understand how existing APIs impact their workflows.</li>
+      <li>Map their workflows to specific APIs and identify any critical gaps. Look for examples where manual workarounds are used (e.g., extracting data to spreadsheets) as these indicate areas for improvement.</li>
+      <li>Assess the adequacy of API documentation, ensuring it meets the needs of both technical and non-technical users.</li>
+    </ul>
+  </li>
+  <li><strong>Legal and Compliance Teams:</strong>
+    <ul>
+      <li>Goal: Ensure APIs comply with industry standards and regulations.</li>
+      <li>Gather specific regulatory requirements that your APIs must adhere to and incorporate these into your governance framework. Work closely with the security team to integrate proper security standards into the API lifecycle.</li>
+    </ul>
+  </li>
+  <li><strong>Other Product Managers:</strong>
+    <ul>
+      <li>Goal: Gain insights into how they manage their API-related backlogs and align with business goals.</li>
+      <li>Learn about their processes for gathering user feedback, managing user personas, and handling API versioning and deprecation.</li>
+    </ul>
+  </li>
+  <li><strong>Third Parties (e.g., Vendors, Customers):</strong>
+    <ul>
+      <li>Goal: Gather external feedback to improve API usability.</li>
+      <li>Understand their key use cases, onboarding experiences, and the challenges they face when using your APIs. This feedback is crucial for identifying areas of improvement and building stronger external relationships.</li>
+    </ul>
+  </li>
+</ul>
 
-&lt;p&gt;In terms of an API program, organizations at this phase will become more formalized in their API design and development processes.  The platform team introduces internal or third-party tooling to the ecosystem to support API use cases.  The platform provides OpenAPI templates, scaffolding, and documented standards to jump-start API design, development, and testing.&lt;/p&gt;
+<h3 id="quick-wins-in-your-first-60-days"><strong>Quick Wins in Your First 60 Days</strong></h3>
 
-&lt;p&gt;Moving from this phase to the Defined phase requires a push-to-pull paradigm shift within an organization, meaning developers will start looking to the platform team to solve many of their problems.  Key steps to move to the next phase include:&lt;/p&gt;
+<p>As you gather information, look for opportunities to deliver quick wins that don’t require heavy engineering effort. These could include:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Build out the Platform Team – consider adding product managers, solution architects, and evangelists.&lt;/li&gt;
-  &lt;li&gt;Use case expansion – identify bottlenecks that can be automated, such as CI/CD.&lt;/li&gt;
-  &lt;li&gt;Systematic feedback – regular surveys and conversations rolled into the roadmap.&lt;/li&gt;
-  &lt;li&gt;Transparent roadmap – the platform product manager must share feedback and the roadmap with the rest of the development team and key stakeholders.&lt;/li&gt;
-  &lt;li&gt;Software delivery metrics – define, measure, and report on software delivery performance using DORA metrics.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Improving or updating API documentation.</li>
+  <li>Writing getting started guides or creating sample code.</li>
+  <li>Streamlining onboarding processes for new developers or third parties.</li>
+</ul>
 
-&lt;p&gt;Example:  The platform team wants to capture more data automatically, for instance, lead time, so they instrument the build process.  They document and provide scripts for all the development teams to start collecting this data.  Two issues arise: 1) differences in builds from team to team prevent the scripts from being fully adopted, and 2) there are critical steps in the lead time process – PR reviews – that are not being fully calculated in this metric.  As the platform team looks to address these issues, they will start the journey to the next phase – Defined.&lt;/p&gt;
+<h3 id="next-steps"><strong>Next Steps</strong></h3>
 
-&lt;h3 id=&quot;phase-2--defined-or-scaling-beyond-the-chaos&quot;&gt;Phase 2 – Defined or Scaling Beyond the Chaos&lt;/h3&gt;
+<p>In my next post, I’ll discuss how to use the feedback you’ve gathered to build a governance framework and integrate it into the development workflow to ensure compliance and efficiency.</p>
 
-&lt;p&gt;There is no more chaos at this phase, and the platform begins to scale across the organization.  The organization manages the platform like its external-facing products – staffed with an entire product team, published roadmap, and KPIs regularly reported to the organization along with standard financial metrics.&lt;/p&gt;
+<p>By following this framework, you’ll set yourself up for success, laying the groundwork for effective API management and governance within your organization.</p>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[Congratulations on your new role as an API Product Manager! It’s an exciting opportunity to shape an organization’s API strategy and governance. Once the dopamine of the LinkedIn likes and congratulations reactions wear off, it’s time to dive into the essentials of your role. Here’s a framework to help you thoughtfully onboard and make an impact.]]></summary></entry><entry><title type="html">API Futures | Building the Platform Engineering MVP</title><link href="http://localhost:4000/2024/07/16/building-the-platform-engineering-mvp.html" rel="alternate" type="text/html" title="API Futures | Building the Platform Engineering MVP" /><published>2024-07-16T00:00:00-04:00</published><updated>2024-07-16T00:00:00-04:00</updated><id>http://localhost:4000/2024/07/16/building-the-platform-engineering-mvp</id><content type="html" xml:base="http://localhost:4000/2024/07/16/building-the-platform-engineering-mvp.html"><![CDATA[<p>This is the thrid post in my Platform Engineering Paves the Path for API Management and Governance series.  In the <a href="/2024/01/09/api-futures-platform-engineering.html">first post</a>, I provided a high-level overview of Platform Engineering and how it can help API governance.  In my <a href="/2024/01/25/platform-engineering-maturity-model.html">second post</a>, I shared a Platform Engineering Maturity Model.  This post focuses on how a Platform Product Manager can get started building a Platform within an organization.</p>
 
-&lt;p&gt;Development teams choose to use the platform’s capabilities because of its value and less because of organizational mandates.  Developers quickly spin up preconfigured environments and infrastructure based on their needs, knowing these common toolsets are uniform across the organization.  Updates made to test environments by the platform team are pulled into the new environments.&lt;/p&gt;
+<h2 id="just-build-an-mvp">Just Build an MVP</h2>
 
-&lt;p&gt;For APIs, governance and standards are in place for common naming conventions, interfaces, and patterns.  Guardrails are automated and built into a developer workflow.  Developers only need to think about the capabilities of their APIs rather than the overall design, as much of the boilerplate definition is already there.&lt;/p&gt;
+<p>Many articles I have read that make the case for Platform Engineering always contain a “Build an MVP” or TVP - “Thinnest Viable Platform” step.  While well-intentioned, I’ve always struggled with exactly what should go into that MVP.  Do you start by building CI/CD pipelines? Layering in monitoring and observability functionality? Are there security issues such as access control to address?  Any of these capabilities and countless others would make for a viable prototype of your platform.  There are so many options and paths to go down, just picking one could be the hardest step.  Additionally, suppose the Platform Product Manager polled each developer or executive on what functionality they’d want to see in a Platform. There’d be just as many opinions on what to include and we’d be stuck in an analysis paralysis loop.  We need to find the one capability that will move the needle for the larger organization as a whole and aligns with the needs of both development and executive teams.</p>
 
-&lt;p&gt;Steps to the final phase, Optimizing:&lt;/p&gt;
+<h3 id="align-with-development-teams">Align with Development Teams</h3>
 
-&lt;ul&gt;
-  &lt;li&gt;Platform adoption – internal and external teams besides engineering begin to leverage the platform.&lt;/li&gt;
-  &lt;li&gt;Organizational buy-in – DORA metrics become the organization’s everyday language and are referenced just as financial metrics.&lt;/li&gt;
-  &lt;li&gt;Decentralized platform ownership – the platform team still exists; however, additional capabilities are built and contributed back to the platform for organizational-wide adoption.&lt;/li&gt;
-&lt;/ul&gt;
+<p>As a product leader, it’s our responsibility to work with developers to understand their key pain points and the things holding them back.  Many times, these aren’t “blockers” meaning they don’t have a workaround, but really “anchors.”  Developers can still get their job done, however the anchor is adding friction and holding them back.</p>
 
-&lt;p&gt;Example: Even with OpenAPI templates, developer teams need help to design APIs as much of their cognitive load is spent learning the intricacies of OpenAPI and ensuring their API designs meet the organizational standards.  The platform team builds tooling that reduces the designer’s exposure to OpenAPI and automates the design to adhere to the organization’s API standards.  Now, API designers only need to think about the use cases of the API and not additional tooling such as linters.  As more and more API designers use this tooling across the organization, the path is paved to move to Phase 3 - Optimizing.&lt;/p&gt;
+<p>In order to gather qualitative data from the teams, the platform product manager not only needs to be embedded within the platform development team but the rest development teams across the organization.  Attend their sprint demos to get an understanding of what they are working on, their accomplishments, and things that may be holding them back.  Review their retrospectives, keying in on themes for improvements.  Additionally, build up personal connections with other developers and developer team leaders.  These relationships will help uncover some of their biggest pain points without the political sugarcoating.</p>
 
-&lt;h3 id=&quot;phase-3---optimizing-or-the-holy-grail&quot;&gt;Phase 3 - Optimizing or “The Holy Grail”&lt;/h3&gt;
+<p>Quantitative data comes from reviewing bug reports, monthly or quarterly say/do metrics, and for more mature organizations, DORA metrics.</p>
 
-&lt;p&gt;In the most mature phase, Optimizing, the platform becomes part of the larger development ecosystem and is a crucial differentiator for the organization.  Note the “-ing” at this phase; organizations never really leave this phase as they continue to evolve and iterate on their platform as new products and technical capabilities are introduced.&lt;/p&gt;
+<h3 id="developing-executive-allies">Developing Executive Allies</h3>
 
-&lt;p&gt;Organizations in this phase provide self-service capabilities for developers. This gives the development team the autonomy to make decisions while providing the required organizational guardrails – security, compliance, costs, and standards.  This combination enables developers to focus on delivering innovation and business value as quickly as possible.&lt;/p&gt;
+<p>Product and Engineering leaders must recognize executives’ broad focus and competing priorities. A typical mistake product leaders make is focusing too much on their own needs, thinking, “If I’m successful, my executive team will be successful.”  This is better framed as “What are the executive’s goals, and how can I best support them?”</p>
 
-&lt;p&gt;The platform is instrumented for constant feedback and monitoring – the platform team understand the usage patterns and can quickly identify points of friction.  It’s these friction points that continue to evolve and make the platform more robust for the development teams.  This efficiency is realized in delightful experiences beyond ones just built for developers.  For instance, onboarding new users, customers, or partners – tasks that once took heroics and weeks or months of time – are now be automated with a push of a button.&lt;/p&gt;
+<p>Executives’ context switches throughout the day, and one of the first mistakes you can make is assuming that your ask is their most pressing need.  Execs have sales, product, HR, fundraising, and finances on their mind every day, so there’s not enough room to consider the nuances of a platform engineering team and how it’ll help the overall API program.</p>
 
-&lt;hr /&gt;
+<p>With that in mind, it’s best to understand what’s most important to the executive team.  Are they concerned about software quality?  Time to market?  Developer productivity?  Reducing costs?  Take the time to understand what keeps the executives up at night regarding software delivery.</p>
 
-&lt;p&gt;My next post will focus on getting executive buy-in for a Platform Engineering effort.  This is the most critical piece in this series, as tech is always the easy part, but getting buy-in and funding are the biggest challenges.&lt;/p&gt;
+<h3 id="building-the-mvp">Building the MVP</h3>
 
-&lt;p&gt;Thank you for reading this far. I would love to hear from you about your experiences and where you think your organization sits on the maturity model. I would also like to discuss how you can move your organization forward.  What are some platform success stories? Failures?  My contact information is in the footer.&lt;/p&gt;
+<p>Once we have feedback and data from developers and executives, we are ready to build the first iteration of our platform.  I like to gather feedback on stickies and group them by category, looking for clusters of pain points and address these first.  Below are some common groupings that a platform engineering team will need to address along with common solutions and outcomes for each category.  This framework will help build your platform story and set the team’s purpose and charter toward the platform MVP.</p>
 
-&lt;hr /&gt;
+<p>Now it’s time to build software, build a platform proof of concept over a couple sprints to show progress honing in on your key metrics and how they align to the organization’s needs.  Gather the internal feedback and continue to iterate.  This POC will prove your platform story and that the platform engineering team will lift the capabilities of the entire development team.</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;This post is part of &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;APIFutures&lt;/a&gt;, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<table>
+  <tr>
+   <th>Type
+   </th>
+   <th>Executive Concern
+   </th>
+   <th>Development Team Concern
+   </th>
+   <th>Solution
+   </th>
+   <th>Outcomes
+   </th>
+  </tr>
+  <tr>
+   <td>Security and Compliance
+   </td>
+   <td>Data security, regulatory compliance
+   </td>
+   <td>Security vulnerabilities, compliance
+   </td>
+   <td>Adding automated tooling for vulnerability scanning, better access controls, and automated compliance checks
+   </td>
+   <td>Protects sensitive data, ensures regulatory compliance, and enhances your security posture
+   </td>
+  </tr>
+  <tr>
+   <td>Customer Satisfaction
+   </td>
+   <td>User experience, customer feedback
+   </td>
+   <td>Bug tracking &amp; resolution, rapid feedback loops
+   </td>
+   <td>Add monitoring and logging systems to track performance, errors, and user behavior.  Integrate feedback tools
+   </td>
+   <td>Transparency into system health, allows for quick issue identification and resolution, and gathers insights into improvement
+   </td>
+  </tr>
+  <tr>
+   <td>Time to Market
+   </td>
+   <td>Speed of delivery, release frequency
+   </td>
+   <td>Release management and deployment automation.
+   </td>
+   <td>Implement CI/CD pipelines, automated testing, and deployment tools
+   </td>
+   <td>Speeds the release cycle, reduces manual errors, and ensures consistent deployment practices
+   </td>
+  </tr>
+  <tr>
+   <td>Quality and Reliability
+   </td>
+   <td>Defect rates, system uptime and availability
+   </td>
+   <td>Code quality, testing and QA coverage
+   </td>
+   <td>Provide tools for automated testing, static code analysis, and continuous monitoring
+   </td>
+   <td>Improves code quality, reducing defect rate, catches bugs early, and ensures adherence to coding standards
+   </td>
+  </tr>
+  <tr>
+   <td>Scalability and Flexibility
+   </td>
+   <td>Scalability, flexibility
+   </td>
+   <td>Performance, optimization, scalability
+   </td>
+   <td>Provide infrastructure that can scale automatically based on demand and tools to monitor application performance
+   </td>
+   <td>Ensures the application can handle increasing loads and maintains optimal performance
+   </td>
+  </tr>
+  <tr>
+   <td>Innovation and Competitive Edge
+   </td>
+   <td>Innovation rate, market position
+   </td>
+   <td>Rapid feedback loop, bug tracking
+   </td>
+   <td>Provide feature flagging tools, A/B testing, and quick rollback mechanisms to enable controlled rollouts and experimentation
+   </td>
+   <td>Allows for safe deployment of new features, rapid iteration based on user feedback, and data-driven decision-making
+   </td>
+  </tr>
+  <tr>
+   <td>Team productivity and morale
+   </td>
+   <td>Developer productivity, employee satisfaction
+   </td>
+   <td>Collaboration and communication, knowledge sharing
+   </td>
+   <td>Integration and collaboration platforms and maintain centralized documentation
+   </td>
+   <td>Facilitates better communication, knowledge sharing, and alignment among team members.
+   </td>
+  </tr>
+</table>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[This is the thrid post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In my second post, I shared a Platform Engineering Maturity Model. This post focuses on how a Platform Product Manager can get started building a Platform within an organization.]]></summary></entry><entry><title type="html">API Futures | Platform Engineering Maturity Model</title><link href="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Maturity Model" /><published>2024-01-25T00:00:00-05:00</published><updated>2024-01-25T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/25/platform-engineering-maturity-model</id><content type="html" xml:base="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html"><![CDATA[<p>This is the second post in my Platform Engineering Paves the Path for API Management and Governance series.  In the <a href="/2024/01/09/api-futures-platform-engineering.html">first post</a>, I provided a high-level overview of Platform Engineering and how it can help API governance.  In this post, we’ll dive into a Platform Engineering Maturity Model.</p>
 
-&lt;p&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/p&gt;</content><author><name>Tim Maguire</name></author><summary type="html">This is the second post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In this post, we’ll dive into a Platform Engineering Maturity Model.</summary></entry><entry><title type="html">API Futures | Platform Engineering Paves the Path for API Management and Governance</title><link href="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Paves the Path for API Management and Governance" /><published>2024-01-09T00:00:00-05:00</published><updated>2024-01-09T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/09/api-futures-platform-engineering</id><content type="html" xml:base="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html">&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;When brainstorming topics for the &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;APIFutures&lt;/a&gt; initiative, one theme that stood out was Platform Engineering and its benefits to an organization.  I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery.  As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance.  This first post introduces the problems a Platform Engineering team can solve and provides a sneak peek of the series.  Hope you enjoy this post and return for the rest of the series. I look forward to feedback to keep the discussion going.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<p>Organizations use a maturity model framework to assess and measure the capabilities of a process or program to gauge where they are today and plot a course or roadmap of where they want to go by identifying specific areas in which to invest.  A traditional maturity model consists of four phases: Initial, Managed, Defined, and Optimizing.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/PartAPIFutures.png&quot; alt=&quot;Part of APIFutures&quot; title=&quot;APIFutures&quot; /&gt;&lt;/p&gt;
+<table>
+  <tr>
+   <th>Phase
+   </th>
+   <th>Description
+   </th>
+  </tr>
+  <tr>
+   <td>0 - Initial
+   </td>
+   <td>Ad hoc, unpredictable
+   </td>
+  </tr>
+  <tr>
+   <td>1 - Managed
+   </td>
+   <td>Defined process in some areas
+   </td>
+  </tr>
+  <tr>
+   <td>2 - Defined
+   </td>
+   <td>Defined process for organization, proactive
+   </td>
+  </tr>
+  <tr>
+   <td>3 - Optimizing
+   </td>
+   <td>Processes are measured, controlled, and focus on improvement
+   </td>
+  </tr>
+</table>
 
-&lt;p&gt;APIs are the building blocks of software.  They facilitate communication and data exchange between various software applications and services and are critical to any organization. However, as organizations create more APIs to meet their business needs, their API ecosystems become complex and challenging to manage. This leads to inconsistent APIs, slower and more complex API development processes, and increases the risk of security flaws in your APIs.  Organizations need a consistent API design and development process to combat this.  It’s vital to reign in this API sprawl, where APIs grow organically with different implementations. This is where a Platform Engineering program can help drive governance and oversight in the API development process.&lt;/p&gt;
+<p>Let’s look at these phases within the context of a platform engineering team.</p>
 
-&lt;p&gt;Building a Platform Engineering program requires strategic practices and patterns to streamline enterprise software delivery.  These initiatives originated at companies like Google and Netflix, blessed with enormous developer teams.  There, the Platform Engineering (PE) team would provide tools, workflows, and best practices to internal developers.  This enabled developers to focus on building applications and APIs that deliver direct business value without worrying about managing infrastructure, Kubernetes (K8s) configurations, or knowing which cloud to deploy to.&lt;/p&gt;
+<h3 id="phase-0---initial-or-pure-chaos">Phase 0 - Initial or Pure Chaos.</h3>
 
-&lt;p&gt;Developers like solving hard problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be complex problems. When these tasks become difficult, developer fatigue and burnout lead to lower-quality APIs, inefficient processes, employee churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.&lt;/p&gt;
+<p>Developers might be productive in pockets, but it’s inconsistent and unpredictable.  Individual teams within the organization may have different processes and rigor regarding software development and delivery.</p>
 
-&lt;p&gt;This practice is sometimes called a Paved Path, meaning the platform engineering team provides a paved path for developers to deliver business value quickly.  &lt;a href=&quot;https://www.gartner.com/en/articles/what-is-platform-engineering&quot;&gt;Gartner&lt;/a&gt; forecasts that 80% of software organizations will have a platform team by 2026. According to &lt;a href=&quot;https://www.puppet.com/resources/state-of-platform-engineering&quot;&gt;Puppet&lt;/a&gt;, organizations that have already instituted a platform have seen an increase of 68% in software delivery.  I like envisioning software releases as boring non-events; they just happen, and no one is paged; a platform team can help achieve this.&lt;/p&gt;
+<p>Teams don’t have great insights into how the overall system performs; triaging and resolving system outages is more reactionary.  After an incident, the team documents the root cause. However, they tend to put the solution on an ambiguous backlog with no apparent owner rather than fixing it immediately before they move to the next problem.</p>
 
-&lt;p&gt;A well-designed platform focuses on four fundamental principles:&lt;/p&gt;
+<p>Because there is no process, API designs – if there are any – become inconsistent from API to API and team to team.  Developers implement interfaces differently from team to team and even from API to API within the same team.  When designing an API, a team might spend excessive effort components that could be reusable, such as pagination.  Teams might reimplement an existing API slightly differently because there is a lack of API documentation and discovery.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Self-Service Empowerment&lt;/li&gt;
-  &lt;li&gt;Developer Experience (DX)&lt;/li&gt;
-  &lt;li&gt;Product Mindset&lt;/li&gt;
-  &lt;li&gt;Constant monitoring and feedback&lt;/li&gt;
-&lt;/ul&gt;
+<p>Here are some critical steps an organization can take to move up to the Developing phase:</p>
 
-&lt;p&gt;However, setting up an API platform comes with its challenges. we must:&lt;/p&gt;
+<ul>
+  <li>Identify a Platform Team – ideally, this should be a team of developers focused solely on the platform and improving the development experience.</li>
+  <li>Work with Stakeholders to identify priorities and concerns – the platform team should interview nearly every developer and product development leader to understand the key things keeping them up at night.</li>
+  <li>Prioritize and Build a Thinnest Viable Product (TVP) – based on the feedback, identify the critical problems to solve and map them to outcomes.  This includes defining success criteria in the form of metrics.</li>
+  <li>Socialize outcomes – it’s crucial to celebrate wins and share the TVP and success outcomes with the rest of the organization.  This will build credibility within the organization, which is needed for later phases.</li>
+</ul>
 
-&lt;ul&gt;
-  &lt;li&gt;Balance openness and security to ensure security standards are met with minimal friction&lt;/li&gt;
-  &lt;li&gt;Ensure scalability to accommodate increasing API usage while versioning APIs and backward compatibility&lt;/li&gt;
-  &lt;li&gt;Leverage API governance and documentation to maintain consistency across APIs&lt;/li&gt;
-&lt;/ul&gt;
+<p>Example:  Developers start grumbling about their tooling or a process within the organization.  A platform team member interviews developers to understand their pain points, how many developers this impacts, and the pain frequency.  With this quantifiable data, the platform team can work on solving these pain points as the first iteration of the TVP, paving their path to the next phase - Managed.</p>
 
-&lt;p&gt;This series aims to provide a detailed exploration of API Platform Engineering. Along the way, we’ll:&lt;/p&gt;
+<h3 id="phase-1---managed-or-controlled-chaos">Phase 1 - Managed or Controlled Chaos</h3>
 
-&lt;ul&gt;
-  &lt;li&gt;Build an API Platform Maturity Model, which can be used to benchmark your organization&lt;/li&gt;
-  &lt;li&gt;Getting started on the platform engineering journey, starting with building the business case&lt;/li&gt;
-  &lt;li&gt;Review team topologies&lt;/li&gt;
-  &lt;li&gt;Develop and prioritize a roadmap for implementation,&lt;/li&gt;
-  &lt;li&gt;Finish with monitoring and gathering feedback for future iterations.&lt;/li&gt;
-  &lt;li&gt;Review case studies of successful and unsuccessful implementations&lt;/li&gt;
-&lt;/ul&gt;
+<p>The TVP is in place, and a platform team exists.  The TVP might vary from a simple wiki with some process documentation to a list of identified services and their documentation.  The platform team owns the ambiguous backlog from phase 0. However, there isn’t a clear roadmap or plan to execute on the roadmap.  It can be best described as a list of divergent technical debt issues to solve.</p>
 
-&lt;p&gt;By the end of this series, my goal is that you understand what goes into building a thriving platform team, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.&lt;/p&gt;
+<p>A delicate balance must be struck here as the adoption of the TVP is limited to a small segment of teams or use cases.  Some teams might view this as a success, while others that don’t yet leverage the benefits might see the platform team as overhead until their use cases are covered.  The platform team will start introducing more tooling to the TVP (at this point, we can retire the term) to cover these additional use cases, bringing more teams on board the platform.</p>
 
-&lt;p&gt;Thanks for reading.  I would love to hear from you if you have any feedback.&lt;/p&gt;
+<p>In terms of an API program, organizations at this phase will become more formalized in their API design and development processes.  The platform team introduces internal or third-party tooling to the ecosystem to support API use cases.  The platform provides OpenAPI templates, scaffolding, and documented standards to jump-start API design, development, and testing.</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;This post is part of &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;APIFutures&lt;/a&gt;, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed &lt;a href=&quot;https://matthewreinbold.github.io/APIFutures/index.html&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<p>Moving from this phase to the Defined phase requires a push-to-pull paradigm shift within an organization, meaning developers will start looking to the platform team to solve many of their problems.  Key steps to move to the next phase include:</p>
 
-&lt;p&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">When brainstorming topics for the APIFutures initiative, one theme that stood out was Platform Engineering and its benefits to an organization. I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery. As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance. This first post introduces the problems a Platform Engineering team can solve and provides a sneak peek of the series. Hope you enjoy this post and return for the rest of the series. I look forward to feedback to keep the discussion going.</summary></entry></feed>
+<ul>
+  <li>Build out the Platform Team – consider adding product managers, solution architects, and evangelists.</li>
+  <li>Use case expansion – identify bottlenecks that can be automated, such as CI/CD.</li>
+  <li>Systematic feedback – regular surveys and conversations rolled into the roadmap.</li>
+  <li>Transparent roadmap – the platform product manager must share feedback and the roadmap with the rest of the development team and key stakeholders.</li>
+  <li>Software delivery metrics – define, measure, and report on software delivery performance using DORA metrics.</li>
+</ul>
+
+<p>Example:  The platform team wants to capture more data automatically, for instance, lead time, so they instrument the build process.  They document and provide scripts for all the development teams to start collecting this data.  Two issues arise: 1) differences in builds from team to team prevent the scripts from being fully adopted, and 2) there are critical steps in the lead time process – PR reviews – that are not being fully calculated in this metric.  As the platform team looks to address these issues, they will start the journey to the next phase – Defined.</p>
+
+<h3 id="phase-2--defined-or-scaling-beyond-the-chaos">Phase 2 – Defined or Scaling Beyond the Chaos</h3>
+
+<p>There is no more chaos at this phase, and the platform begins to scale across the organization.  The organization manages the platform like its external-facing products – staffed with an entire product team, published roadmap, and KPIs regularly reported to the organization along with standard financial metrics.</p>
+
+<p>Development teams choose to use the platform’s capabilities because of its value and less because of organizational mandates.  Developers quickly spin up preconfigured environments and infrastructure based on their needs, knowing these common toolsets are uniform across the organization.  Updates made to test environments by the platform team are pulled into the new environments.</p>
+
+<p>For APIs, governance and standards are in place for common naming conventions, interfaces, and patterns.  Guardrails are automated and built into a developer workflow.  Developers only need to think about the capabilities of their APIs rather than the overall design, as much of the boilerplate definition is already there.</p>
+
+<p>Steps to the final phase, Optimizing:</p>
+
+<ul>
+  <li>Platform adoption – internal and external teams besides engineering begin to leverage the platform.</li>
+  <li>Organizational buy-in – DORA metrics become the organization’s everyday language and are referenced just as financial metrics.</li>
+  <li>Decentralized platform ownership – the platform team still exists; however, additional capabilities are built and contributed back to the platform for organizational-wide adoption.</li>
+</ul>
+
+<p>Example: Even with OpenAPI templates, developer teams need help to design APIs as much of their cognitive load is spent learning the intricacies of OpenAPI and ensuring their API designs meet the organizational standards.  The platform team builds tooling that reduces the designer’s exposure to OpenAPI and automates the design to adhere to the organization’s API standards.  Now, API designers only need to think about the use cases of the API and not additional tooling such as linters.  As more and more API designers use this tooling across the organization, the path is paved to move to Phase 3 - Optimizing.</p>
+
+<h3 id="phase-3---optimizing-or-the-holy-grail">Phase 3 - Optimizing or “The Holy Grail”</h3>
+
+<p>In the most mature phase, Optimizing, the platform becomes part of the larger development ecosystem and is a crucial differentiator for the organization.  Note the “-ing” at this phase; organizations never really leave this phase as they continue to evolve and iterate on their platform as new products and technical capabilities are introduced.</p>
+
+<p>Organizations in this phase provide self-service capabilities for developers. This gives the development team the autonomy to make decisions while providing the required organizational guardrails – security, compliance, costs, and standards.  This combination enables developers to focus on delivering innovation and business value as quickly as possible.</p>
+
+<p>The platform is instrumented for constant feedback and monitoring – the platform team understand the usage patterns and can quickly identify points of friction.  It’s these friction points that continue to evolve and make the platform more robust for the development teams.  This efficiency is realized in delightful experiences beyond ones just built for developers.  For instance, onboarding new users, customers, or partners – tasks that once took heroics and weeks or months of time – are now be automated with a push of a button.</p>
+
+<hr />
+
+<p>My next post will focus on getting executive buy-in for a Platform Engineering effort.  This is the most critical piece in this series, as tech is always the easy part, but getting buy-in and funding are the biggest challenges.</p>
+
+<p>Thank you for reading this far. I would love to hear from you about your experiences and where you think your organization sits on the maturity model. I would also like to discuss how you can move your organization forward.  What are some platform success stories? Failures?  My contact information is in the footer.</p>
+
+<hr />
+
+<blockquote>
+  <p><em>This post is part of <a href="https://matthewreinbold.github.io/APIFutures/index.html">APIFutures</a>, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed <a href="https://matthewreinbold.github.io/APIFutures/index.html">here</a>.</em></p>
+</blockquote>
+
+<p><a href="/">Home</a></p>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[This is the second post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In this post, we’ll dive into a Platform Engineering Maturity Model.]]></summary></entry><entry><title type="html">API Futures | Platform Engineering Paves the Path for API Management and Governance</title><link href="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Paves the Path for API Management and Governance" /><published>2024-01-09T00:00:00-05:00</published><updated>2024-01-09T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/09/api-futures-platform-engineering</id><content type="html" xml:base="http://localhost:4000/2024/01/09/api-futures-platform-engineering.html"><![CDATA[<blockquote>
+  <p><em>When brainstorming topics for the <a href="https://matthewreinbold.github.io/APIFutures/index.html">APIFutures</a> initiative, one theme that stood out was Platform Engineering and its benefits to an organization.  I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery.  As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance.  This first post introduces the problems a Platform Engineering team can solve and provides a sneak peek of the series.  Hope you enjoy this post and return for the rest of the series. I look forward to feedback to keep the discussion going.</em></p>
+</blockquote>
+
+<p><img src="/assets/img/PartAPIFutures.png" alt="Part of APIFutures" title="APIFutures" /></p>
+
+<p>APIs are the building blocks of software.  They facilitate communication and data exchange between various software applications and services and are critical to any organization. However, as organizations create more APIs to meet their business needs, their API ecosystems become complex and challenging to manage. This leads to inconsistent APIs, slower and more complex API development processes, and increases the risk of security flaws in your APIs.  Organizations need a consistent API design and development process to combat this.  It’s vital to reign in this API sprawl, where APIs grow organically with different implementations. This is where a Platform Engineering program can help drive governance and oversight in the API development process.</p>
+
+<p>Building a Platform Engineering program requires strategic practices and patterns to streamline enterprise software delivery.  These initiatives originated at companies like Google and Netflix, blessed with enormous developer teams.  There, the Platform Engineering (PE) team would provide tools, workflows, and best practices to internal developers.  This enabled developers to focus on building applications and APIs that deliver direct business value without worrying about managing infrastructure, Kubernetes (K8s) configurations, or knowing which cloud to deploy to.</p>
+
+<p>Developers like solving hard problems. However, routine tasks such as finding documentation and knowing if that documentation is up to date or figuring out the proper configuration of a K8s cluster should not be complex problems. When these tasks become difficult, developer fatigue and burnout lead to lower-quality APIs, inefficient processes, employee churn, and security exposure. We aim to improve the developer experience by providing the tools developers need to reduce this friction and the additional cognitive load on the developer.</p>
+
+<p>This practice is sometimes called a Paved Path, meaning the platform engineering team provides a paved path for developers to deliver business value quickly.  <a href="https://www.gartner.com/en/articles/what-is-platform-engineering">Gartner</a> forecasts that 80% of software organizations will have a platform team by 2026. According to <a href="https://www.puppet.com/resources/state-of-platform-engineering">Puppet</a>, organizations that have already instituted a platform have seen an increase of 68% in software delivery.  I like envisioning software releases as boring non-events; they just happen, and no one is paged; a platform team can help achieve this.</p>
+
+<p>A well-designed platform focuses on four fundamental principles:</p>
+
+<ul>
+  <li>Self-Service Empowerment</li>
+  <li>Developer Experience (DX)</li>
+  <li>Product Mindset</li>
+  <li>Constant monitoring and feedback</li>
+</ul>
+
+<p>However, setting up an API platform comes with its challenges. we must:</p>
+
+<ul>
+  <li>Balance openness and security to ensure security standards are met with minimal friction</li>
+  <li>Ensure scalability to accommodate increasing API usage while versioning APIs and backward compatibility</li>
+  <li>Leverage API governance and documentation to maintain consistency across APIs</li>
+</ul>
+
+<p>This series aims to provide a detailed exploration of API Platform Engineering. Along the way, we’ll:</p>
+
+<ul>
+  <li>Build an API Platform Maturity Model, which can be used to benchmark your organization</li>
+  <li>Getting started on the platform engineering journey, starting with building the business case</li>
+  <li>Review team topologies</li>
+  <li>Develop and prioritize a roadmap for implementation,</li>
+  <li>Finish with monitoring and gathering feedback for future iterations.</li>
+  <li>Review case studies of successful and unsuccessful implementations</li>
+</ul>
+
+<p>By the end of this series, my goal is that you understand what goes into building a thriving platform team, providing valuable insights into its components, best practices, and the path to successful implementation, paving the way for a best-in-class API program.</p>
+
+<p>Thanks for reading.  I would love to hear from you if you have any feedback.</p>
+
+<blockquote>
+  <p><em>This post is part of <a href="https://matthewreinbold.github.io/APIFutures/index.html">APIFutures</a>, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed <a href="https://matthewreinbold.github.io/APIFutures/index.html">here</a>.</em></p>
+</blockquote>
+
+<p><a href="/">Home</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[When brainstorming topics for the APIFutures initiative, one theme that stood out was Platform Engineering and its benefits to an organization. I kept reading and listening to podcasts on how Platform Engineering and DORA metrics streamline software development and delivery. As I took notes and learned more about this topic, I decided to roll this into the API Futures project and start a series on how Platform Engineering streamlines API management and governance. This first post introduces the problems a Platform Engineering team can solve and provides a sneak peek of the series. Hope you enjoy this post and return for the rest of the series. I look forward to feedback to keep the discussion going.]]></summary></entry></feed>

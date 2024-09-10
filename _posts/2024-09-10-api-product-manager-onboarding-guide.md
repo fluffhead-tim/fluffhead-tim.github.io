@@ -1,11 +1,10 @@
 ---
 layout: post
 title:  "API Futures | API Product Manager Onboarding Guide"
-date: 2024-00-09
+date: 2024-09-10
 author: Tim Maguire
 ---
 
-# API Product Manager Onboarding Guide
 
 Congratulations on your new role as an API Product Manager! It's an exciting opportunity to shape an organization's API strategy and governance. Once the dopamine of the LinkedIn likes and congratulations reactions wear off, it’s time to dive into the essentials of your role. Here’s a framework to help you thoughtfully onboard and make an impact.
 
