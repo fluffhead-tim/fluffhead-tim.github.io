@@ -2,7 +2,7 @@
 layout: post
 title:  "Managing Remote Teams"
 date: 2024-10-24
-author: Tim Maguire
+author: Tim Maguire 
 ---
 
 It’s a fact of life today — especially in tech — that we’ll be working in a globally distributed workforce. However as teams and companies made the transition from in-office to remote and back or to a hybrid situation, we’ve continued to hold on to our old habits from when we all worked in the office.
