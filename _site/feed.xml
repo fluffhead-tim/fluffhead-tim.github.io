@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-24T13:22:03-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">Managing Remote Teams</title><link href="http://localhost:4000/2024/10/24/managing-remote-teams.html" rel="alternate" type="text/html" title="Managing Remote Teams" /><published>2024-10-24T00:00:00-04:00</published><updated>2024-10-24T00:00:00-04:00</updated><id>http://localhost:4000/2024/10/24/managing-remote-teams</id><content type="html" xml:base="http://localhost:4000/2024/10/24/managing-remote-teams.html"><![CDATA[<p>It’s a fact of life today — especially in tech — that we’ll be working in a globally distributed workforce. However as teams and companies made the transition from in-office to remote and back or to a hybrid situation, we’ve continued to hold on to our old habits from when we all worked in the office.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-01T11:32:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">Building a Governance Framework</title><link href="http://localhost:4000/2024/11/01/building-a-governance-framework.html" rel="alternate" type="text/html" title="Building a Governance Framework" /><published>2024-11-01T00:00:00-04:00</published><updated>2024-11-01T00:00:00-04:00</updated><id>http://localhost:4000/2024/11/01/building-a-governance-framework</id><content type="html" xml:base="http://localhost:4000/2024/11/01/building-a-governance-framework.html"><![CDATA[<p>In a previous <a href="/2024/09/10/api-product-manager-onboarding-guide.html">post</a>, I outlined a high-level plan for onboarding as a new API Product Manager responsible for an organization’s API governance.  We focused on meeting different stakeholders and gathering the information needed from each team.  As you have begun compiling that data, we’ll make it actionable in this post.</p>
+
+<p>This post provides an example of an API governance framework and demonstrates how it can be applied to an organization.  Keep in mind that a governance framework is a living set of guidelines and standards that evolve as an organization grows and moves along the <a href="/2024/01/25/platform-engineering-maturity-model.html">API Platform Maturity Model</a>. A start-up will have very different requirements from an established enterprise organization in a highly regulated industry such as financial services.  Evaluate your organization against the API Platform Maturity Model and determine which components best fit your organization.</p>
+
+<p>The high-level steps for building an API Governance Framework include:</p>
+
+<ol>
+  <li>Defining the Objectives and Goals</li>
+  <li>Engaging stakeholders</li>
+  <li>Forming a Cross-Functional API Governance Team</li>
+  <li>Auditing and Mapping the Existing API Landscape</li>
+  <li>Defining and Documenting Governance Policies</li>
+</ol>
+
+<h2 id="defining-the-objectives-and-goals">Defining the Objectives and Goals</h2>
+
+<p>When implementing an API governance framework, it is crucial to set clear, measurable goals that align with customers’ needs as well as overall business and technology goals. For example, a goal could be to reduce API implementation lead time by 20% over the next quarter. This specific metric will serve as a focal point for all stakeholders, increasing accountability and driving progress.</p>
+
+<h4 id="developer-experience">Developer Experience</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Streamline the development process, reduce friction, and provide clear guidelines for API design, testing, and deployment.</li>
+  <li><strong>Goal:</strong> Reduce API implementation lead time by 20% in 3 months.</li>
+</ul>
+
+<h4 id="api-consumers">API Consumers</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Ensure consistent, reliable, and secure APIs for both internal and external consumers.</li>
+  <li><strong>Goal:</strong> Enhance API usability and security to improve consumer satisfaction and trust measured by quarterly surveys.</li>
+</ul>
+
+<h4 id="feedback-loops">Feedback Loops</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Establish channels for API developers and consumers to provide feedback on the framework and suggest improvements.</li>
+  <li><strong>Goal:</strong> Implement a feedback mechanism that captures and addresses 80% of user suggestions within the quarter.</li>
+</ul>
+
+<h4 id="documentation--support">Documentation &amp; Support</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Provide comprehensive support for developers to understand and quickly implement the framework within their existing workflow.</li>
+  <li><strong>Goal:</strong> Achieve a 90% satisfaction rate in developer support services by the end of the quarter.</li>
+</ul>
+
+<p>Draft the objectives and goals into an API Governance Mission Statement.  The mission statement should be unique to your organization and contain clear targets specific to the current situation.  It might be a roadmap for moving along the API Platform Maturity Model or your organization might have a mature API program and there are regulatory requirements you must meet.  For instance, the organization might be in a regulated industry such as finance or healthcare and therefore must meet specific regulatory requirements such as HIPAA, FHIR, or GDPR.  Other organizations may have had a security incident and want to put tighter controls around their security and risk management.  The framework could focus more on internal factors such as accountability and transparency by establishing clear ownership and visibility into an organization’s APIs.  Use it as the north star when implementing the framework.</p>
+
+<h2 id="engaging-stakeholders">Engaging stakeholders</h2>
+
+<p>I won’t get into too much detail here, as I’ve outlined how to engage stakeholders in a <a href="/2024/09/10/api-product-manager-onboarding-guide.html">previous post</a>.  However, as you start to think about the framework, socialize your mission statement draft as you meet with stakeholders.  Getting their feedback, ideas, and buy-in early will be critical to the success of the program.  Ensure to use efficient communication channels to streamline engagement in a transparent manner, not all meetings need to be face-to-face.  I have found that setting up a public Slack channel, open meetings, and a wiki page is a good starting point for transparency.  Publish the mission statement, important updates, milestones and meeting recordings to the wiki page.  Then, provide updates to the larger organization through all-hands meetings.</p>
+
+<h2 id="forming-a-governance-team">Forming a Governance Team</h2>
+
+<p>I generally advise against creating ad hoc committees, as they might lead to groupthink or are not a top priority for the team members, however, as you meet with stakeholders, identify enthusiastic partners who will become net promoters of the governance program.  They will be vital in winning over the rest of the organization when rolling out the framework.  I have found that when implementing any sort of change, one third of organization members are usually on board and one third are detractors of the change.  We want to focus on converting the undecided third to the promoter side.  The team should have a representative from each department and each team member should have a specific role and responsibility.  If someone raises objections, listen to them and show empathy, work their feedback into the goals and mission statement.  When I was part of an API governance program, it was some of the most rewarding work I did at the company.  I was also able to meet and learn from team members with whom I don’t necessarily cross paths</p>
+
+<h2 id="documenting-existing-apis">Documenting Existing APIs</h2>
+
+<p>I touched on this briefly in a <a href="/2024/09/10/api-product-manager-onboarding-guide.html">previous post</a>, however as you start to catalog existing APIs quickly review each one for patterns and potential compliance issues. This is not necessarily the time to resolve issues; instead, simply note potential issues such as API versioning, naming conventions, and other elements that may need addressing.  Some of these issues may not be immediately fixable.  This audit provides a foundation as you begin defining governance policies.  In large organizations where APIs grow organically, it’s likely that there will be inconsistencies from API to API.  Rather than judge or question implementation, acknowledge that the team building the API had the best intentions and made the best decision possible with the data they had at the time.  Start to document these issues and as you work with the governance team, you will standardize these APIs.</p>
+
+<h2 id="defining-and-documenting-api-governance-policies">Defining and Documenting API Governance Policies</h2>
+
+<p>Based on stakeholder input and the findings from the API cataloging, start to define a set of policies and standards that will form the foundation of the governance framework.  Some of these may be driven from outside factors such as compliance and regulatory requirements, while others will be driven from internal best practices.  Similar to how an organization has branding guidelines, think of the API as an extension of your organization’s digital brand.  You want a consistent developer experience for all consumers of your APIs and the framework is where you’ll document it.</p>
+
+<p>With the team, identify three pressing issues that can be immediately fixed, document them, and work with the API development teams to put these on their backlogs.  Defining overly rigid policies and standards can stifle innovation and flexibility.  In other words, avoid creating policies for issues that do not exist.  Starting with some foundational, non-intrusive policies will help establish a strong baseline of API quality and consistency without causing disruptions or breaking changes.  Here are some examples where you could start:</p>
+
+<ul>
+  <li><strong>API Documentation Completeness and Accuracy</strong>: Ensure that every REST API is fully documented with an OpenAPI definition.  Include descriptions, examples, error codes, limits and query parameters.  This will immediately reduce support requests and promote better adoption of the APIs.</li>
+  <li><strong>Use Consistent Status Codes and Error Handling</strong>: This gets back to my API branding note, having each endpoint return consistent status codes and error messages will provide developers with a predictable implementation.</li>
+  <li><strong>Require Consistent Authentication and Authorization, such as OAuth 2.0</strong>: Not only does this improve API security, but makes it easier for developers to understand access requirements leading to a better overall developer experience.</li>
+</ul>
+
+<p>Each of these policies can be easily instrumented using tooling such as Spectral and built into a developer’s workflow.  After a while, these policies will become second nature to all API developers within the organization.</p>
+
+<p>I will dig into more specifics and provide examples of governance policies in a future post.  I love to talk about this so let me know what some of your expeeriences have been when implementing a governance framework.</p>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[In a previous post, I outlined a high-level plan for onboarding as a new API Product Manager responsible for an organization’s API governance. We focused on meeting different stakeholders and gathering the information needed from each team. As you have begun compiling that data, we’ll make it actionable in this post.]]></summary></entry><entry><title type="html">Managing Remote Teams</title><link href="http://localhost:4000/2024/10/24/managing-remote-teams.html" rel="alternate" type="text/html" title="Managing Remote Teams" /><published>2024-10-24T00:00:00-04:00</published><updated>2024-10-24T00:00:00-04:00</updated><id>http://localhost:4000/2024/10/24/managing-remote-teams</id><content type="html" xml:base="http://localhost:4000/2024/10/24/managing-remote-teams.html"><![CDATA[<p>It’s a fact of life today — especially in tech — that we’ll be working in a globally distributed workforce. However as teams and companies made the transition from in-office to remote and back or to a hybrid situation, we’ve continued to hold on to our old habits from when we all worked in the office.</p>
 
 <p>I’ve put together some tips and guidelines from my experiences leading globally distributed teams in multiple continents and timezones. Hope these help and would love to hear some of your remote management tips.</p>
 

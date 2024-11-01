@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Building a Governance Framework | Tim Maguire</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Building a Governance Framework" />
+<meta name="author" content="Tim Maguire" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In a previous post, I outlined a high-level plan for onboarding as a new API Product Manager responsible for an organization’s API governance. We focused on meeting different stakeholders and gathering the information needed from each team. As you have begun compiling that data, we’ll make it actionable in this post." />
+<meta property="og:description" content="In a previous post, I outlined a high-level plan for onboarding as a new API Product Manager responsible for an organization’s API governance. We focused on meeting different stakeholders and gathering the information needed from each team. As you have begun compiling that data, we’ll make it actionable in this post." />
+<link rel="canonical" href="http://localhost:4000/2024/11/01/building-a-governance-framework.html" />
+<meta property="og:url" content="http://localhost:4000/2024/11/01/building-a-governance-framework.html" />
+<meta property="og:site_name" content="Tim Maguire" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-11-01T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Building a Governance Framework" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tim Maguire"},"dateModified":"2024-11-01T00:00:00-04:00","datePublished":"2024-11-01T00:00:00-04:00","description":"In a previous post, I outlined a high-level plan for onboarding as a new API Product Manager responsible for an organization’s API governance. We focused on meeting different stakeholders and gathering the information needed from each team. As you have begun compiling that data, we’ll make it actionable in this post.","headline":"Building a Governance Framework","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/11/01/building-a-governance-framework.html"},"url":"http://localhost:4000/2024/11/01/building-a-governance-framework.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tim Maguire" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tim Maguire</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Building a Governance Framework</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-11-01T00:00:00-04:00" itemprop="datePublished">Nov 1, 2024
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Tim Maguire</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In a previous <a href="/2024/09/10/api-product-manager-onboarding-guide.html">post</a>, I outlined a high-level plan for onboarding as a new API Product Manager responsible for an organization’s API governance.  We focused on meeting different stakeholders and gathering the information needed from each team.  As you have begun compiling that data, we’ll make it actionable in this post.</p>
+
+<p>This post provides an example of an API governance framework and demonstrates how it can be applied to an organization.  Keep in mind that a governance framework is a living set of guidelines and standards that evolve as an organization grows and moves along the <a href="/2024/01/25/platform-engineering-maturity-model.html">API Platform Maturity Model</a>. A start-up will have very different requirements from an established enterprise organization in a highly regulated industry such as financial services.  Evaluate your organization against the API Platform Maturity Model and determine which components best fit your organization.</p>
+
+<p>The high-level steps for building an API Governance Framework include:</p>
+
+<ol>
+  <li>Defining the Objectives and Goals</li>
+  <li>Engaging stakeholders</li>
+  <li>Forming a Cross-Functional API Governance Team</li>
+  <li>Auditing and Mapping the Existing API Landscape</li>
+  <li>Defining and Documenting Governance Policies</li>
+</ol>
+
+<h2 id="defining-the-objectives-and-goals">Defining the Objectives and Goals</h2>
+
+<p>When implementing an API governance framework, it is crucial to set clear, measurable goals that align with customers’ needs as well as overall business and technology goals. For example, a goal could be to reduce API implementation lead time by 20% over the next quarter. This specific metric will serve as a focal point for all stakeholders, increasing accountability and driving progress.</p>
+
+<h4 id="developer-experience">Developer Experience</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Streamline the development process, reduce friction, and provide clear guidelines for API design, testing, and deployment.</li>
+  <li><strong>Goal:</strong> Reduce API implementation lead time by 20% in 3 months.</li>
+</ul>
+
+<h4 id="api-consumers">API Consumers</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Ensure consistent, reliable, and secure APIs for both internal and external consumers.</li>
+  <li><strong>Goal:</strong> Enhance API usability and security to improve consumer satisfaction and trust measured by quarterly surveys.</li>
+</ul>
+
+<h4 id="feedback-loops">Feedback Loops</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Establish channels for API developers and consumers to provide feedback on the framework and suggest improvements.</li>
+  <li><strong>Goal:</strong> Implement a feedback mechanism that captures and addresses 80% of user suggestions within the quarter.</li>
+</ul>
+
+<h4 id="documentation--support">Documentation &amp; Support</h4>
+
+<ul>
+  <li><strong>Objective:</strong> Provide comprehensive support for developers to understand and quickly implement the framework within their existing workflow.</li>
+  <li><strong>Goal:</strong> Achieve a 90% satisfaction rate in developer support services by the end of the quarter.</li>
+</ul>
+
+<p>Draft the objectives and goals into an API Governance Mission Statement.  The mission statement should be unique to your organization and contain clear targets specific to the current situation.  It might be a roadmap for moving along the API Platform Maturity Model or your organization might have a mature API program and there are regulatory requirements you must meet.  For instance, the organization might be in a regulated industry such as finance or healthcare and therefore must meet specific regulatory requirements such as HIPAA, FHIR, or GDPR.  Other organizations may have had a security incident and want to put tighter controls around their security and risk management.  The framework could focus more on internal factors such as accountability and transparency by establishing clear ownership and visibility into an organization’s APIs.  Use it as the north star when implementing the framework.</p>
+
+<h2 id="engaging-stakeholders">Engaging stakeholders</h2>
+
+<p>I won’t get into too much detail here, as I’ve outlined how to engage stakeholders in a <a href="/2024/09/10/api-product-manager-onboarding-guide.html">previous post</a>.  However, as you start to think about the framework, socialize your mission statement draft as you meet with stakeholders.  Getting their feedback, ideas, and buy-in early will be critical to the success of the program.  Ensure to use efficient communication channels to streamline engagement in a transparent manner, not all meetings need to be face-to-face.  I have found that setting up a public Slack channel, open meetings, and a wiki page is a good starting point for transparency.  Publish the mission statement, important updates, milestones and meeting recordings to the wiki page.  Then, provide updates to the larger organization through all-hands meetings.</p>
+
+<h2 id="forming-a-governance-team">Forming a Governance Team</h2>
+
+<p>I generally advise against creating ad hoc committees, as they might lead to groupthink or are not a top priority for the team members, however, as you meet with stakeholders, identify enthusiastic partners who will become net promoters of the governance program.  They will be vital in winning over the rest of the organization when rolling out the framework.  I have found that when implementing any sort of change, one third of organization members are usually on board and one third are detractors of the change.  We want to focus on converting the undecided third to the promoter side.  The team should have a representative from each department and each team member should have a specific role and responsibility.  If someone raises objections, listen to them and show empathy, work their feedback into the goals and mission statement.  When I was part of an API governance program, it was some of the most rewarding work I did at the company.  I was also able to meet and learn from team members with whom I don’t necessarily cross paths</p>
+
+<h2 id="documenting-existing-apis">Documenting Existing APIs</h2>
+
+<p>I touched on this briefly in a <a href="/2024/09/10/api-product-manager-onboarding-guide.html">previous post</a>, however as you start to catalog existing APIs quickly review each one for patterns and potential compliance issues. This is not necessarily the time to resolve issues; instead, simply note potential issues such as API versioning, naming conventions, and other elements that may need addressing.  Some of these issues may not be immediately fixable.  This audit provides a foundation as you begin defining governance policies.  In large organizations where APIs grow organically, it’s likely that there will be inconsistencies from API to API.  Rather than judge or question implementation, acknowledge that the team building the API had the best intentions and made the best decision possible with the data they had at the time.  Start to document these issues and as you work with the governance team, you will standardize these APIs.</p>
+
+<h2 id="defining-and-documenting-api-governance-policies">Defining and Documenting API Governance Policies</h2>
+
+<p>Based on stakeholder input and the findings from the API cataloging, start to define a set of policies and standards that will form the foundation of the governance framework.  Some of these may be driven from outside factors such as compliance and regulatory requirements, while others will be driven from internal best practices.  Similar to how an organization has branding guidelines, think of the API as an extension of your organization’s digital brand.  You want a consistent developer experience for all consumers of your APIs and the framework is where you’ll document it.</p>
+
+<p>With the team, identify three pressing issues that can be immediately fixed, document them, and work with the API development teams to put these on their backlogs.  Defining overly rigid policies and standards can stifle innovation and flexibility.  In other words, avoid creating policies for issues that do not exist.  Starting with some foundational, non-intrusive policies will help establish a strong baseline of API quality and consistency without causing disruptions or breaking changes.  Here are some examples where you could start:</p>
+
+<ul>
+  <li><strong>API Documentation Completeness and Accuracy</strong>: Ensure that every REST API is fully documented with an OpenAPI definition.  Include descriptions, examples, error codes, limits and query parameters.  This will immediately reduce support requests and promote better adoption of the APIs.</li>
+  <li><strong>Use Consistent Status Codes and Error Handling</strong>: This gets back to my API branding note, having each endpoint return consistent status codes and error messages will provide developers with a predictable implementation.</li>
+  <li><strong>Require Consistent Authentication and Authorization, such as OAuth 2.0</strong>: Not only does this improve API security, but makes it easier for developers to understand access requirements leading to a better overall developer experience.</li>
+</ul>
+
+<p>Each of these policies can be easily instrumented using tooling such as Spectral and built into a developer’s workflow.  After a while, these policies will become second nature to all API developers within the organization.</p>
+
+<p>I will dig into more specifics and provide examples of governance policies in a future post.  I love to talk about this so let me know what some of your expeeriences have been when implementing a governance framework.</p>
+
+  </div><a class="u-url" href="/2024/11/01/building-a-governance-framework.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tim Maguire</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tim Maguire</li><li><a class="u-email" href="mailto:tim&#64;tmaguire&#46;net">tim&#64;tmaguire&#46;net</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fluffhead-tim"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fluffhead-tim</span></a></li><li><a href="https://www.linkedin.com/in/tmaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">tmaguire</span></a></li><li><a href="https://hachyderm.io/@TimMaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">TimMaguire</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Tim Maguire&#39;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
