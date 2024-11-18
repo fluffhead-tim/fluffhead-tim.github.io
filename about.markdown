@@ -1,9 +1,14 @@
 ---
 layout: page
-title: About
+title: About Timothy Maguire | API Product Manager | MBA
 permalink: /about/
 ---
 
-Tim Maguire's bio is supposed to go here, however he has not added anything yet.
+I have a passion for making developers' lives better -- especially API developers and consumers -- one API at a time, one organization at a time.
 
-You can view his [LinkedIn Profile](https://www.linkedin.com/in/tmaguire/) here.
+
+Elsewhere on the web:
+- [LinkedIn](https://www.linkedin.com/in/tmaguire/) 
+- [Mastodon](https://hachyderm.io/@TimMaguire)
+- [GitHub](https://github.com/fluffhead-tim)
+- [BlueSky](https://bsky.app/profile/tmaguire.bsky.social)
