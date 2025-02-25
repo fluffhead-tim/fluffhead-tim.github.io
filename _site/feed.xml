@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-18T15:43:24-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">Who, What, Where, When, Why, and How of Product Development</title><link href="http://localhost:4000/2024/11/18/who-what-where-when-why-and-how-of-product-development.html" rel="alternate" type="text/html" title="Who, What, Where, When, Why, and How of Product Development" /><published>2024-11-18T00:00:00-05:00</published><updated>2024-11-18T00:00:00-05:00</updated><id>http://localhost:4000/2024/11/18/who-what-where-when-why-and-how-of-product-development</id><content type="html" xml:base="http://localhost:4000/2024/11/18/who-what-where-when-why-and-how-of-product-development.html"><![CDATA[<p>I recently had an interesting discussion with some colleagues at a networking event about the differences in the roles and responsibilities of the product management function across organizations.  In many organizations, the product team is seen as a jack of all trades and fills gaps between other teams within the organization.  In a startup, this is usually acceptable and expected; however, as an organization scales, it is best to clearly delineate product-building functions.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-02-25T14:17:45-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">API Versioning</title><link href="http://localhost:4000/blog/2025/02/25/api-versioning.html" rel="alternate" type="text/html" title="API Versioning" /><published>2025-02-25T00:00:00-05:00</published><updated>2025-02-25T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/02/25/api-versioning</id><content type="html" xml:base="http://localhost:4000/blog/2025/02/25/api-versioning.html"><![CDATA[<p>As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me.</p>
+
+<h2 id="defining-a-versioning-strategy">Defining a Versioning Strategy</h2>
+
+<p>The first step is establishing a versioning strategy as a policy for all APIs in your organization. There are two perspectives on API versioning: internal (how your API developers think about different versions) and external (how third-party developers interact with your API versions).</p>
+
+<p>A widely adopted approach—and my preferred one—is Semantic Versioning (SemVer) in the <code class="language-plaintext highlighter-rouge">MAJOR.MINOR.PATCH</code> format. The version number updates based on the type of API change:</p>
+
+<ul>
+  <li>MAJOR - for a breaking change</li>
+  <li>MINOR - for new additive features</li>
+  <li>PATCH - for small bug fixes</li>
+</ul>
+
+<p>Breaking changes are updates that will cause existing applications to stop working. These include removing endpoints, changing data types, or modifying request/response formats or required fields. Any such change requires incrementing the <code class="language-plaintext highlighter-rouge">MAJOR</code> version.</p>
+
+<p>For changes to data types or formats, it’s often better to create a new endpoint with updated parameters rather than modify existing ones. This preserves existing functionality and lets developers upgrade on their schedule. When taking this approach, mark old endpoints as <code class="language-plaintext highlighter-rouge">deprecated</code> in your OpenAPI definition, including clear guidance on using the new endpoint. This approach works well with developer expectations too—since many developers associate <code class="language-plaintext highlighter-rouge">MAJOR</code> version changes with new functionality, using <code class="language-plaintext highlighter-rouge">MINOR</code> version updates for these changes makes more sense.</p>
+
+<p>When sharing API versions with consumers—your third-party developers—you need a reliable way for them to code against the correct version. Here are several approaches, each with distinct advantages and drawbacks.</p>
+
+<h3 id="uri-versioning">URI Versioning</h3>
+
+<p>This is the most straightforward approach and my preferred method. When coupled with SemVer strategy, only the <code class="language-plaintext highlighter-rouge">MAJOR</code> version of the API appears in the URL. Consumers use the latest version within their specified MAJOR version of the API.</p>
+
+<p><code class="language-plaintext highlighter-rouge">https://api.example.com/v1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">https://api.example.com/v2</code></p>
+
+<p>This works well because new features and bug fixes can be added to <code class="language-plaintext highlighter-rouge">v1</code> of the API without requiring any changes on the consumer’s end—they continue using the same API endpoint as before.</p>
+
+<p>However, troubleshooting can be challenging when bugs or unexpected changes are introduced in <code class="language-plaintext highlighter-rouge">MINOR</code> or <code class="language-plaintext highlighter-rouge">PATCH</code> updates. The consumer’s application might break without them realizing the API has been updated. To mitigate this, it’s best practice to include the full <code class="language-plaintext highlighter-rouge">MAJOR.MINOR.PATCH</code> version in the API response header for every call.</p>
+
+<h3 id="header-based-versioning">Header-Based Versioning</h3>
+
+<p>There are two types of header-based versioning: custom request header and content negotiation versioning. In this approach, API consumers include versioning information in HTTP headers to specify which API version they want to use. This keeps URLs cleaner and moves versioning metadata to the header—aligning with RESTful principles. However, both methods can add complexity to implementation, caching, and discoverability. It’s crucial to provide clear documentation so API consumers understand how to call specific versions.</p>
+
+<p>Custom request header versioning uses a dedicated header like <code class="language-plaintext highlighter-rouge">Accept-Version</code> or <code class="language-plaintext highlighter-rouge">X-API-Version</code> in each API call. The main advantage of this approach is transparency—consumers know exactly which API version they’re calling, making troubleshooting simpler.</p>
+
+<p>Content negotiation versioning uses the standard <code class="language-plaintext highlighter-rouge">Accept</code> header in the format <code class="language-plaintext highlighter-rouge">application/vnd.example.api.v1+json</code>. While this offers more flexibility, it requires a more complex implementation on both the provider and consumer side.</p>
+
+<h3 id="query-parameter-versioning">Query Parameter Versioning</h3>
+
+<p>Query parameter versioning specifies the API version through a query parameter, like <code class="language-plaintext highlighter-rouge">/api/resource?version=1</code> or <code class="language-plaintext highlighter-rouge">/api/resource?v=1.2.3</code>. This approach is straightforward and makes troubleshooting easier, as developers can quickly test different versions by changing the parameter value.</p>
+
+<p>However, this method can be prone to errors when developers fail to update their query parameters or attempt to access undocumented API versions.</p>
+
+<p>This versioning strategy works best for internal APIs where developers understand the patterns and need to call specific versions based on their requirements, without caching concerns. It’s generally not recommended for public-facing, production APIs.</p>
+
+<h3 id="pros-and-cons-of-versioning-approaches">Pros and Cons of Versioning Approaches</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Versioning Approach</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>URI Versioning</strong></td>
+      <td>- Simple and intuitive for consumers</td>
+      <td>- Troubleshooting can be challenging with MINOR/PATCH updates</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>- Allows consumers to use the latest features without changing URLs</td>
+      <td>- Requires full version in response header for clarity</td>
+    </tr>
+    <tr>
+      <td><strong>Header-Based Versioning</strong></td>
+      <td>- Keeps URLs clean and aligns with RESTful principles</td>
+      <td>- Adds complexity to implementation and caching</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>- Transparency in version usage</td>
+      <td>- Requires clear documentation for consumers</td>
+    </tr>
+    <tr>
+      <td><strong>Query Parameter Versioning</strong></td>
+      <td>- Easy to test different versions by changing parameter values</td>
+      <td>- Prone to errors if parameters are not updated</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>- Simplifies troubleshooting</td>
+      <td>- Not recommended for public-facing APIs due to potential misuse</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>What versioning strategies do you use? Are there any approaches you’d recommend avoiding? I’d love to hear about your experiences.</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfakLlpQThG4yJlSgCtj-a3ysCYHTrT3NvJhYTW_wqtFixZLQ/viewform?embedded=true" width="740" height="1232" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>]]></content><author><name>Tim Maguire</name></author><category term="blog" /><summary type="html"><![CDATA[As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me.]]></summary></entry><entry><title type="html">Who, What, Where, When, Why, and How of Product Development</title><link href="http://localhost:4000/2024/11/18/who-what-where-when-why-and-how-of-product-development.html" rel="alternate" type="text/html" title="Who, What, Where, When, Why, and How of Product Development" /><published>2024-11-18T00:00:00-05:00</published><updated>2024-11-18T00:00:00-05:00</updated><id>http://localhost:4000/2024/11/18/who-what-where-when-why-and-how-of-product-development</id><content type="html" xml:base="http://localhost:4000/2024/11/18/who-what-where-when-why-and-how-of-product-development.html"><![CDATA[<p>I recently had an interesting discussion with some colleagues at a networking event about the differences in the roles and responsibilities of the product management function across organizations.  In many organizations, the product team is seen as a jack of all trades and fills gaps between other teams within the organization.  In a startup, this is usually acceptable and expected; however, as an organization scales, it is best to clearly delineate product-building functions.</p>
 
 <p>Let’s break this down by asking the 5 Ws (and an H)</p>
 

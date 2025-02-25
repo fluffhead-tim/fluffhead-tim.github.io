@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>API Versioning | Tim Maguire</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="API Versioning" />
+<meta name="author" content="Tim Maguire" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me." />
+<meta property="og:description" content="As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me." />
+<link rel="canonical" href="http://localhost:4000/blog/2025/02/25/api-versioning.html" />
+<meta property="og:url" content="http://localhost:4000/blog/2025/02/25/api-versioning.html" />
+<meta property="og:site_name" content="Tim Maguire" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="API Versioning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tim Maguire"},"dateModified":"2025-02-25T00:00:00-05:00","datePublished":"2025-02-25T00:00:00-05:00","description":"As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me.","headline":"API Versioning","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025/02/25/api-versioning.html"},"url":"http://localhost:4000/blog/2025/02/25/api-versioning.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tim Maguire" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tim Maguire</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Timothy Maguire | API Product Manager | MBA</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">API Versioning</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-02-25T00:00:00-05:00" itemprop="datePublished">Feb 25, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Tim Maguire</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me.</p>
+
+<h2 id="defining-a-versioning-strategy">Defining a Versioning Strategy</h2>
+
+<p>The first step is establishing a versioning strategy as a policy for all APIs in your organization. There are two perspectives on API versioning: internal (how your API developers think about different versions) and external (how third-party developers interact with your API versions).</p>
+
+<p>A widely adopted approach—and my preferred one—is Semantic Versioning (SemVer) in the <code class="language-plaintext highlighter-rouge">MAJOR.MINOR.PATCH</code> format. The version number updates based on the type of API change:</p>
+
+<ul>
+  <li>MAJOR - for a breaking change</li>
+  <li>MINOR - for new additive features</li>
+  <li>PATCH - for small bug fixes</li>
+</ul>
+
+<p>Breaking changes are updates that will cause existing applications to stop working. These include removing endpoints, changing data types, or modifying request/response formats or required fields. Any such change requires incrementing the <code class="language-plaintext highlighter-rouge">MAJOR</code> version.</p>
+
+<p>For changes to data types or formats, it’s often better to create a new endpoint with updated parameters rather than modify existing ones. This preserves existing functionality and lets developers upgrade on their schedule. When taking this approach, mark old endpoints as <code class="language-plaintext highlighter-rouge">deprecated</code> in your OpenAPI definition, including clear guidance on using the new endpoint. This approach works well with developer expectations too—since many developers associate <code class="language-plaintext highlighter-rouge">MAJOR</code> version changes with new functionality, using <code class="language-plaintext highlighter-rouge">MINOR</code> version updates for these changes makes more sense.</p>
+
+<p>When sharing API versions with consumers—your third-party developers—you need a reliable way for them to code against the correct version. Here are several approaches, each with distinct advantages and drawbacks.</p>
+
+<h3 id="uri-versioning">URI Versioning</h3>
+
+<p>This is the most straightforward approach and my preferred method. When coupled with SemVer strategy, only the <code class="language-plaintext highlighter-rouge">MAJOR</code> version of the API appears in the URL. Consumers use the latest version within their specified MAJOR version of the API.</p>
+
+<p><code class="language-plaintext highlighter-rouge">https://api.example.com/v1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">https://api.example.com/v2</code></p>
+
+<p>This works well because new features and bug fixes can be added to <code class="language-plaintext highlighter-rouge">v1</code> of the API without requiring any changes on the consumer’s end—they continue using the same API endpoint as before.</p>
+
+<p>However, troubleshooting can be challenging when bugs or unexpected changes are introduced in <code class="language-plaintext highlighter-rouge">MINOR</code> or <code class="language-plaintext highlighter-rouge">PATCH</code> updates. The consumer’s application might break without them realizing the API has been updated. To mitigate this, it’s best practice to include the full <code class="language-plaintext highlighter-rouge">MAJOR.MINOR.PATCH</code> version in the API response header for every call.</p>
+
+<h3 id="header-based-versioning">Header-Based Versioning</h3>
+
+<p>There are two types of header-based versioning: custom request header and content negotiation versioning. In this approach, API consumers include versioning information in HTTP headers to specify which API version they want to use. This keeps URLs cleaner and moves versioning metadata to the header—aligning with RESTful principles. However, both methods can add complexity to implementation, caching, and discoverability. It’s crucial to provide clear documentation so API consumers understand how to call specific versions.</p>
+
+<p>Custom request header versioning uses a dedicated header like <code class="language-plaintext highlighter-rouge">Accept-Version</code> or <code class="language-plaintext highlighter-rouge">X-API-Version</code> in each API call. The main advantage of this approach is transparency—consumers know exactly which API version they’re calling, making troubleshooting simpler.</p>
+
+<p>Content negotiation versioning uses the standard <code class="language-plaintext highlighter-rouge">Accept</code> header in the format <code class="language-plaintext highlighter-rouge">application/vnd.example.api.v1+json</code>. While this offers more flexibility, it requires a more complex implementation on both the provider and consumer side.</p>
+
+<h3 id="query-parameter-versioning">Query Parameter Versioning</h3>
+
+<p>Query parameter versioning specifies the API version through a query parameter, like <code class="language-plaintext highlighter-rouge">/api/resource?version=1</code> or <code class="language-plaintext highlighter-rouge">/api/resource?v=1.2.3</code>. This approach is straightforward and makes troubleshooting easier, as developers can quickly test different versions by changing the parameter value.</p>
+
+<p>However, this method can be prone to errors when developers fail to update their query parameters or attempt to access undocumented API versions.</p>
+
+<p>This versioning strategy works best for internal APIs where developers understand the patterns and need to call specific versions based on their requirements, without caching concerns. It’s generally not recommended for public-facing, production APIs.</p>
+
+<h3 id="pros-and-cons-of-versioning-approaches">Pros and Cons of Versioning Approaches</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Versioning Approach</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>URI Versioning</strong></td>
+      <td>- Simple and intuitive for consumers</td>
+      <td>- Troubleshooting can be challenging with MINOR/PATCH updates</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>- Allows consumers to use the latest features without changing URLs</td>
+      <td>- Requires full version in response header for clarity</td>
+    </tr>
+    <tr>
+      <td><strong>Header-Based Versioning</strong></td>
+      <td>- Keeps URLs clean and aligns with RESTful principles</td>
+      <td>- Adds complexity to implementation and caching</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>- Transparency in version usage</td>
+      <td>- Requires clear documentation for consumers</td>
+    </tr>
+    <tr>
+      <td><strong>Query Parameter Versioning</strong></td>
+      <td>- Easy to test different versions by changing parameter values</td>
+      <td>- Prone to errors if parameters are not updated</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>- Simplifies troubleshooting</td>
+      <td>- Not recommended for public-facing APIs due to potential misuse</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>What versioning strategies do you use? Are there any approaches you’d recommend avoiding? I’d love to hear about your experiences.</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfakLlpQThG4yJlSgCtj-a3ysCYHTrT3NvJhYTW_wqtFixZLQ/viewform?embedded=true" width="740" height="1232" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+  </div><a class="u-url" href="/blog/2025/02/25/api-versioning.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tim Maguire</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tim Maguire</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fluffhead-tim"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fluffhead-tim</span></a></li><li><a href="https://www.linkedin.com/in/tmaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">tmaguire</span></a></li><li><a href="https://hachyderm.io/@TimMaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">TimMaguire</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Tim Maguire&#39;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
