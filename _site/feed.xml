@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-02-25T14:17:45-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">API Versioning</title><link href="http://localhost:4000/blog/2025/02/25/api-versioning.html" rel="alternate" type="text/html" title="API Versioning" /><published>2025-02-25T00:00:00-05:00</published><updated>2025-02-25T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/02/25/api-versioning</id><content type="html" xml:base="http://localhost:4000/blog/2025/02/25/api-versioning.html"><![CDATA[<p>As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-17T15:39:08-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">Leveraging AI to quickly prototype APIs</title><link href="http://localhost:4000/blog/2025/04/14/leveraging-ai-to-prototype-apis.html" rel="alternate" type="text/html" title="Leveraging AI to quickly prototype APIs" /><published>2025-04-14T00:00:00-04:00</published><updated>2025-04-14T00:00:00-04:00</updated><id>http://localhost:4000/blog/2025/04/14/leveraging-ai-to-prototype-apis</id><content type="html" xml:base="http://localhost:4000/blog/2025/04/14/leveraging-ai-to-prototype-apis.html"><![CDATA[<p>I use AI tools daily for everything from web searches to finding recipes to prototyping APIs. While powerful, these tools often require repeating the same context multiple times for similar tasks. This is where Custom GPTs in ChatGPT excel. These specialized AI assistants are trained on custom instructions and knowledge for specific tasks. Their purpose is to create focused, task-specific versions of ChatGPT that include:</p>
+
+<ul>
+  <li>Custom instructions and knowledge that define the GPT’s expertise and behavior</li>
+  <li>Specific conversation starters to guide users toward intended use cases</li>
+  <li>Pre-defined constraints and guidelines that ensure consistent outputs</li>
+</ul>
+
+<p>This allows organizations and individuals to create AI assistants optimized for specific workflows, rather than relying on the general-purpose ChatGPT model. These specialized assistants deliver more accurate, relevant, and consistent responses for their intended use cases.</p>
+
+<p>Below is a framework for creating your own Custom GPT that follows Product Management best practices, think of it as writing a PRD for your Custom GPT. I’ll then demonstrate how I used this framework to build my own OpenAPI Generator.</p>
+
+<h2 id="framework">Framework</h2>
+
+<p>There are five attributes that go into customizing a GPT:</p>
+
+<p><strong>Persona:</strong> This is who you want the custom GPT to behave as, similar to a persona in Product Management. The persona depends on your target users and the GPT’s purpose. For example, a GPT with an API architect persona will provide different output than one designed for sharing recipes and cooking tips.</p>
+
+<p><strong>Context:</strong> This is the “why.” The context provides the critical foundation for the Custom GPT by outlining the problem being solved and providing necessary background information.</p>
+
+<p><strong>Task:</strong> The task describes what the Custom GPT will actually do. Will it perform calculations? Create recipes? Generate API descriptions? These are the functional requirements that define what the GPT must do to address user needs.</p>
+
+<p>An additional element of the task portion is “Chain of Thought Reasoning.” This breaks down the task into digestible step-by-step operations. For example: Step 1: introduce yourself, Step 2: request task details from the user, Step 3: ask clarifying questions, Step 4: summarize the main points, Step 5: generate clear practical action items.</p>
+
+<p><strong>Output:</strong> This section defines the Custom GPT’s output format and style. Should it be a file, image, PDF, or code? It also determines the tone the GPT should use when answering questions.</p>
+
+<p><strong>Constraint:</strong> Think of constraints as there requirements of a PRD. For a Custom GPT, these are the limitations or boundaries of the response.  For example, topics or subjects to avoid, such as technical jargon or political topics or specific guidelines to follow.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Now that we have our framework, let’s build a Custom GPT. In this example, we’ll create an OpenAPI generator that takes in the business rules and use cases for an API and outputs an OpenAPI API description.</p>
+
+<p><strong>Persona</strong> - The OpenAPI generator assumes the persona of an API Architect. Adding specific details enhances the use case.  For example, an API Architect at an Enterprise FinTech company responsible for API design and execution across the organization. For this demonstration, we’ll keep it generic.</p>
+
+<p><strong>Context</strong> - Our goal is to design an API description file using the OpenAPI 3.1 specification, following provided business rules and use cases.</p>
+
+<p><strong>Tasks</strong> - Here’s our step-by-step task list. We’ll make these steps clear and engaging to create a more personable GPT:</p>
+
+<p>Step 1: Begin with a self-introduction</p>
+
+<p>Step 2: Rather than immediately creating the API description, first ask clarifying questions about the business use cases</p>
+
+<p>Step 3: Based on initial feedback, determine whether additional clarification is needed</p>
+
+<p>Step 4: Inquire about API functionality—whether it’s read-only or supports CRUD operations—and explore security requirements</p>
+
+<p>Step 5: Once requirements are clear, generate the API description in OpenAPI 3.1.0</p>
+
+<p><strong>Constraints</strong> - This section outlines the governance rules and API style guide. It specifies which OpenAPI attributes to use or avoid. While these constraints remain generic for this example, they incorporate standard API design best practices. This is where you would add your organization’s specific style guide and API standards.</p>
+
+<p>Here is a partial list:</p>
+
+<ul>
+  <li>All requests and responses must use JSON.</li>
+  <li>Use UUIDs throughout for all resource identifiers.</li>
+</ul>
+
+<p>Naming Conventions:</p>
+
+<ul>
+  <li>Use clear, descriptive names and follow conventions from schema repositories like <a href="http://schema.org">schema.org</a></li>
+  <li>Adhere to industry standards from RFCs, IANA, and JSON Schema for naming and definitions</li>
+</ul>
+
+<p>Security:</p>
+
+<ul>
+  <li>Implement authentication for all endpoints. When the authentication method isn’t specified, ask users to choose from OpenAPI-supported schemes (such as API Key or OAuth 2.0)</li>
+  <li>Follow OWASP API Top-10 security best practices</li>
+  <li>Include 401 (Unauthorized) responses for all authenticated endpoints</li>
+</ul>
+
+<p>Schemas:</p>
+
+<ul>
+  <li>Define reusable schemas in the components/schemas section and reference them throughout</li>
+  <li>Provide examples for all schemas, including component schemas</li>
+  <li>Include clear descriptions for schemas and their properties</li>
+</ul>
+
+<p>Parameters:</p>
+
+<ul>
+  <li>Implement pagination for all collection endpoints</li>
+  <li>Provide examples for all parameters, including those in components</li>
+</ul>
+
+<p>Status Codes:</p>
+
+<ul>
+  <li>Use appropriate success codes: 200, 201, 202, and 204</li>
+  <li>Include 404 status codes for missing resources</li>
+  <li>Add 401 status codes for authentication failures</li>
+  <li>Use 500 codes for server errors</li>
+  <li>Implement 429 codes for rate-limiting scenarios</li>
+</ul>
+
+<p>Errors:</p>
+
+<ul>
+  <li>Document all possible error scenarios</li>
+  <li>Format error responses using Problem Details as specified in <a href="https://www.rfc-editor.org/rfc/rfc9457.html">RFC 9457</a></li>
+</ul>
+
+<p>Rate Limiting:</p>
+
+<ul>
+  <li>Add standard rate-limiting headers (X-RateLimit-Limit, X-RateLimit-Remaining, Retry-After) for successful responses (200, 201, 202, 204)</li>
+  <li>Include rate-limiting headers for all 4XX responses (400, 401, 403, 404)</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+
+<p>The output will be a valid API description following the OpenAPI 3.1 specification. Here are the specific formatting requirements:</p>
+
+<ul>
+  <li>Include detailed descriptions for all components, including endpoints, operations, responses, parameters, schemas, and any nested elements within components.</li>
+  <li>Each header must include either a content or schema definition.</li>
+  <li>Categorize API endpoints using both global and operation-specific tags.</li>
+  <li>Include a populated “tags” array in the OpenAPI object.</li>
+  <li>Provide a detailed, non-empty description field for each operation.</li>
+  <li>Eliminate duplicate keys in the JSON output—avoid using the same keyword (like “type”) multiple times within a single property definition.</li>
+  <li>For nullable properties, express them as “type”: [“string”, “null”] rather than using the nullable keyword. This ensures proper type definition without duplicate declarations.</li>
+  <li>The Info object must include:
+    <ul>
+      <li>A complete “contact” object with “name,” “url,” and “email” fields</li>
+      <li>A “license” object with a “url” field</li>
+      <li>A “servers” object with a non-empty array</li>
+    </ul>
+  </li>
+  <li>Write a clear, descriptive summary for each operation</li>
+  <li>Assign a unique operationId to each operation</li>
+</ul>
+
+<h2 id="knowledge">Knowledge</h2>
+
+<p>In the Knowledge section of the GPT, upload the complete OpenAPI 3.1.0 and JSON Schema specifications. I downloaded the specifications as PDFs from <a href="https://spec.openapis.org/oas/v3.1.0.html">OpenAPI</a> and the <a href="https://json-schema.org/draft/2020-12/json-schema-core">JSON Schema</a> websites. This ensures the GPT can access the full specifications and generate API descriptions that comply with them. Remember to update the knowledge base whenever these specifications change.  If your company has documented style validation rules, provide those here as well.</p>
+
+<h2 id="conversation-starters">Conversation Starters</h2>
+
+<p>While conversation starters are optional, they help users quickly learn how to use the GPT effectively. Include both simple prompts to test the clarifying questions feature and more detailed examples. Here are mine:</p>
+
+<ul>
+  <li>Build a pet store API</li>
+  <li>Build a Dad Joke API</li>
+  <li>Design a simple blog management API with small schemas. Include GET, POST, PUT, and DELETE methods only. Secure the API with an API Key.</li>
+  <li>Design a Task Management To-Do list API, each task will have an assignee and due date. The assignee will close each task upon completion.</li>
+</ul>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>After setting this up, start testing by creating OpenAPI description documents. You can either build your own GPT or <a href="https://chatgpt.com/g/g-67f43c5208fc8191b6461ac83f1d9365-tim-s-openapi-generator">use mine</a>. Validate the API description docs to verify they’re valid JSON and comply with the OpenAPI 3.1 specification. If you encounter specific issues with the APIs, return to the GPT instructions and refine the task or constraints to address them. Don’t expect perfection on the first try—it usually takes some iteration.</p>
+
+<p>With your OpenAPI description in hand, numerous possibilities open up: validating, mocking, testing, building, and deploying your API. In future posts, I’ll explore these aspects and how to automate them using this Custom GPT.</p>]]></content><author><name>Tim Maguire</name></author><category term="blog" /><summary type="html"><![CDATA[I use AI tools daily for everything from web searches to finding recipes to prototyping APIs. While powerful, these tools often require repeating the same context multiple times for similar tasks. This is where Custom GPTs in ChatGPT excel. These specialized AI assistants are trained on custom instructions and knowledge for specific tasks. Their purpose is to create focused, task-specific versions of ChatGPT that include:]]></summary></entry><entry><title type="html">API Versioning</title><link href="http://localhost:4000/blog/2025/02/25/api-versioning.html" rel="alternate" type="text/html" title="API Versioning" /><published>2025-02-25T00:00:00-05:00</published><updated>2025-02-25T00:00:00-05:00</updated><id>http://localhost:4000/blog/2025/02/25/api-versioning</id><content type="html" xml:base="http://localhost:4000/blog/2025/02/25/api-versioning.html"><![CDATA[<p>As a product manager for SaaS applications, making platform updates is relatively straightforward. Features can be rolled out gradually using feature flags to ensure proper adoption and quality, and aspects like migration and versioning typically aren’t required. While SaaS documentation needs updating, it’s not as critical as updating developer documentation for API changes. In this article, I’ll provide a framework for versioning an API and sharing experiences of what has and hasn’t worked for me.</p>
 
 <h2 id="defining-a-versioning-strategy">Defining a Versioning Strategy</h2>
 
