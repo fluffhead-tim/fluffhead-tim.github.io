@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-09-18T13:53:53-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">AI Driven Product Categorization</title><link href="http://localhost:4000/blog/2025/09/18/ai-driven-product-categorization.html" rel="alternate" type="text/html" title="AI Driven Product Categorization" /><published>2025-09-18T00:00:00-04:00</published><updated>2025-09-18T00:00:00-04:00</updated><id>http://localhost:4000/blog/2025/09/18/ai-driven-product-categorization</id><content type="html" xml:base="http://localhost:4000/blog/2025/09/18/ai-driven-product-categorization.html"><![CDATA[<p>I was working with a client who had  35,000+ individual SKUs in their inventory catalog, and they wanted to automate publishing these products to about 8-10 different online marketplaces. Today it’s a laborious manual process involving spreadsheets and lots of copying and pasting of the same fields over and over.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-10-15T16:56:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tim Maguire</title><subtitle>Tim Maguire&apos;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</subtitle><entry><title type="html">Learn How I built an AI-powered API for Marketplace Taxonomy Automation</title><link href="http://localhost:4000/blog/2025/10/15/Learn-how-to-build.html" rel="alternate" type="text/html" title="Learn How I built an AI-powered API for Marketplace Taxonomy Automation" /><published>2025-10-15T00:00:00-04:00</published><updated>2025-10-15T00:00:00-04:00</updated><id>http://localhost:4000/blog/2025/10/15/Learn-how-to-build</id><content type="html" xml:base="http://localhost:4000/blog/2025/10/15/Learn-how-to-build.html"><![CDATA[<p>In retail, product categorization is crucial. It directly impacts discoverability, conversion, and compliance by driving the required attributes in search facets. While rule-based systems might work in some verticals, marketplace taxonomies differ significantly, mappings drift over time, and edge cases multiply rapidly.</p>
+
+<p>My client manages over 35,000 unique products distributed across 10 different marketplaces. Each marketplace has its own complex category taxonomy with thousands of categories. Their team was overwhelmed, spending hours daily copying and pasting product data between spreadsheets, manually creating products, and selecting multi-tiered categories for each product in each marketplace.</p>
+
+<p>This situation clearly needed automation. Fortunately, their inventory management system and all marketplaces offered robust APIs that simplified the initial automation process. I created a system to pull updated items daily and post them to the respective marketplaces. This worked smoothly when marketplace categories were known, but new products still required human intervention to assign appropriate categories, a task too complex for simple rule-based processing and perfect for an AI solution.</p>
+
+<p>I enhanced the pipeline with an AI-powered categorization layer after connecting the catalog and marketplace APIs. This layer analyzes raw product metadata (title, description, attributes, images), compares it against each marketplace taxonomy, and predicts the most appropriate leaf category. To maintain high accuracy, I implemented a human review step and guardrails for handling edge cases, balancing automation with necessary control.</p>
+
+<p>The results are impressive. What once required over 60 hours of manual work across the team of five, now takes minutes through a simple API call that returns suggested categories. The system scales effortlessly across their products and multiple marketplaces, remaining resilient against taxonomy changes and drift.</p>
+
+<p>I’ll share more details about this project, including API design, tools used (Flask, ChatGPT, Claude, Linnworks and Mirakl APIs, and LLM integration), and key lessons learned, in a <a href="https://maven.com/p/18bd3a/build-your-own-ai-powered-api-for-n8n"><strong>Lightning Lesson this October</strong></a>. If you’re interested in how AI and APIs can create smarter, faster marketplace integrations, join me live for the demonstration.</p>
+
+<p><a href="https://www.linkedin.com/in/tmaguire/">Tim Maguire</a> is a seasoned Product Manager specializing in APIs, AI integrations, and developer tools. He has led product management teams at leading API platforms such as SmartBear and RapidAPI, where he scaled developer ecosystems and launched governance and automation capabilities. Today, Tim builds intelligent API solutions that bridge commerce and AI, like the Retail Categorizer API you’ll see today, bringing efficiency and insight to complex data workflows. He’s passionate about using AI to make developer and business operations smarter, faster, and more consistent.</p>]]></content><author><name>Tim Maguire</name></author><category term="blog" /><summary type="html"><![CDATA[In retail, product categorization is crucial. It directly impacts discoverability, conversion, and compliance by driving the required attributes in search facets. While rule-based systems might work in some verticals, marketplace taxonomies differ significantly, mappings drift over time, and edge cases multiply rapidly.]]></summary></entry><entry><title type="html">AI Driven Product Categorization</title><link href="http://localhost:4000/blog/2025/09/18/ai-driven-product-categorization.html" rel="alternate" type="text/html" title="AI Driven Product Categorization" /><published>2025-09-18T00:00:00-04:00</published><updated>2025-09-18T00:00:00-04:00</updated><id>http://localhost:4000/blog/2025/09/18/ai-driven-product-categorization</id><content type="html" xml:base="http://localhost:4000/blog/2025/09/18/ai-driven-product-categorization.html"><![CDATA[<p>I was working with a client who had  35,000+ individual SKUs in their inventory catalog, and they wanted to automate publishing these products to about 8-10 different online marketplaces. Today it’s a laborious manual process involving spreadsheets and lots of copying and pasting of the same fields over and over.</p>
 
 <p>The sticking point was product categorization. For discoverability and compliance, each marketplace required products to be mapped to its own unique taxonomy. These taxonomies weren’t stored in the client’s main system, so we couldn’t just push them automatically. That kept a human-in-the-loop, slowing everything down and potentially causing errors.</p>
 
@@ -640,120 +652,4 @@
    <td>Facilitates better communication, knowledge sharing, and alignment among team members.
    </td>
   </tr>
-</table>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[This is the thrid post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In my second post, I shared a Platform Engineering Maturity Model. This post focuses on how a Platform Product Manager can get started building a Platform within an organization.]]></summary></entry><entry><title type="html">API Futures | Platform Engineering Maturity Model</title><link href="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html" rel="alternate" type="text/html" title="API Futures | Platform Engineering Maturity Model" /><published>2024-01-25T00:00:00-05:00</published><updated>2024-01-25T00:00:00-05:00</updated><id>http://localhost:4000/2024/01/25/platform-engineering-maturity-model</id><content type="html" xml:base="http://localhost:4000/2024/01/25/platform-engineering-maturity-model.html"><![CDATA[<p>This is the second post in my Platform Engineering Paves the Path for API Management and Governance series.  In the <a href="/2024/01/09/api-futures-platform-engineering.html">first post</a>, I provided a high-level overview of Platform Engineering and how it can help API governance.  In this post, we’ll dive into a Platform Engineering Maturity Model.</p>
-
-<p>Organizations use a maturity model framework to assess and measure the capabilities of a process or program to gauge where they are today and plot a course or roadmap of where they want to go by identifying specific areas in which to invest.  A traditional maturity model consists of four phases: Initial, Managed, Defined, and Optimizing.</p>
-
-<table>
-  <tr>
-   <th>Phase
-   </th>
-   <th>Description
-   </th>
-  </tr>
-  <tr>
-   <td>0 - Initial
-   </td>
-   <td>Ad hoc, unpredictable
-   </td>
-  </tr>
-  <tr>
-   <td>1 - Managed
-   </td>
-   <td>Defined process in some areas
-   </td>
-  </tr>
-  <tr>
-   <td>2 - Defined
-   </td>
-   <td>Defined process for organization, proactive
-   </td>
-  </tr>
-  <tr>
-   <td>3 - Optimizing
-   </td>
-   <td>Processes are measured, controlled, and focus on improvement
-   </td>
-  </tr>
-</table>
-
-<p>Let’s look at these phases within the context of a platform engineering team.</p>
-
-<h3 id="phase-0---initial-or-pure-chaos">Phase 0 - Initial or Pure Chaos.</h3>
-
-<p>Developers might be productive in pockets, but it’s inconsistent and unpredictable.  Individual teams within the organization may have different processes and rigor regarding software development and delivery.</p>
-
-<p>Teams don’t have great insights into how the overall system performs; triaging and resolving system outages is more reactionary.  After an incident, the team documents the root cause. However, they tend to put the solution on an ambiguous backlog with no apparent owner rather than fixing it immediately before they move to the next problem.</p>
-
-<p>Because there is no process, API designs – if there are any – become inconsistent from API to API and team to team.  Developers implement interfaces differently from team to team and even from API to API within the same team.  When designing an API, a team might spend excessive effort components that could be reusable, such as pagination.  Teams might reimplement an existing API slightly differently because there is a lack of API documentation and discovery.</p>
-
-<p>Here are some critical steps an organization can take to move up to the Developing phase:</p>
-
-<ul>
-  <li>Identify a Platform Team – ideally, this should be a team of developers focused solely on the platform and improving the development experience.</li>
-  <li>Work with Stakeholders to identify priorities and concerns – the platform team should interview nearly every developer and product development leader to understand the key things keeping them up at night.</li>
-  <li>Prioritize and Build a Thinnest Viable Product (TVP) – based on the feedback, identify the critical problems to solve and map them to outcomes.  This includes defining success criteria in the form of metrics.</li>
-  <li>Socialize outcomes – it’s crucial to celebrate wins and share the TVP and success outcomes with the rest of the organization.  This will build credibility within the organization, which is needed for later phases.</li>
-</ul>
-
-<p>Example:  Developers start grumbling about their tooling or a process within the organization.  A platform team member interviews developers to understand their pain points, how many developers this impacts, and the pain frequency.  With this quantifiable data, the platform team can work on solving these pain points as the first iteration of the TVP, paving their path to the next phase - Managed.</p>
-
-<h3 id="phase-1---managed-or-controlled-chaos">Phase 1 - Managed or Controlled Chaos</h3>
-
-<p>The TVP is in place, and a platform team exists.  The TVP might vary from a simple wiki with some process documentation to a list of identified services and their documentation.  The platform team owns the ambiguous backlog from phase 0. However, there isn’t a clear roadmap or plan to execute on the roadmap.  It can be best described as a list of divergent technical debt issues to solve.</p>
-
-<p>A delicate balance must be struck here as the adoption of the TVP is limited to a small segment of teams or use cases.  Some teams might view this as a success, while others that don’t yet leverage the benefits might see the platform team as overhead until their use cases are covered.  The platform team will start introducing more tooling to the TVP (at this point, we can retire the term) to cover these additional use cases, bringing more teams on board the platform.</p>
-
-<p>In terms of an API program, organizations at this phase will become more formalized in their API design and development processes.  The platform team introduces internal or third-party tooling to the ecosystem to support API use cases.  The platform provides OpenAPI templates, scaffolding, and documented standards to jump-start API design, development, and testing.</p>
-
-<p>Moving from this phase to the Defined phase requires a push-to-pull paradigm shift within an organization, meaning developers will start looking to the platform team to solve many of their problems.  Key steps to move to the next phase include:</p>
-
-<ul>
-  <li>Build out the Platform Team – consider adding product managers, solution architects, and evangelists.</li>
-  <li>Use case expansion – identify bottlenecks that can be automated, such as CI/CD.</li>
-  <li>Systematic feedback – regular surveys and conversations rolled into the roadmap.</li>
-  <li>Transparent roadmap – the platform product manager must share feedback and the roadmap with the rest of the development team and key stakeholders.</li>
-  <li>Software delivery metrics – define, measure, and report on software delivery performance using DORA metrics.</li>
-</ul>
-
-<p>Example:  The platform team wants to capture more data automatically, for instance, lead time, so they instrument the build process.  They document and provide scripts for all the development teams to start collecting this data.  Two issues arise: 1) differences in builds from team to team prevent the scripts from being fully adopted, and 2) there are critical steps in the lead time process – PR reviews – that are not being fully calculated in this metric.  As the platform team looks to address these issues, they will start the journey to the next phase – Defined.</p>
-
-<h3 id="phase-2--defined-or-scaling-beyond-the-chaos">Phase 2 – Defined or Scaling Beyond the Chaos</h3>
-
-<p>There is no more chaos at this phase, and the platform begins to scale across the organization.  The organization manages the platform like its external-facing products – staffed with an entire product team, published roadmap, and KPIs regularly reported to the organization along with standard financial metrics.</p>
-
-<p>Development teams choose to use the platform’s capabilities because of its value and less because of organizational mandates.  Developers quickly spin up preconfigured environments and infrastructure based on their needs, knowing these common toolsets are uniform across the organization.  Updates made to test environments by the platform team are pulled into the new environments.</p>
-
-<p>For APIs, governance and standards are in place for common naming conventions, interfaces, and patterns.  Guardrails are automated and built into a developer workflow.  Developers only need to think about the capabilities of their APIs rather than the overall design, as much of the boilerplate definition is already there.</p>
-
-<p>Steps to the final phase, Optimizing:</p>
-
-<ul>
-  <li>Platform adoption – internal and external teams besides engineering begin to leverage the platform.</li>
-  <li>Organizational buy-in – DORA metrics become the organization’s everyday language and are referenced just as financial metrics.</li>
-  <li>Decentralized platform ownership – the platform team still exists; however, additional capabilities are built and contributed back to the platform for organizational-wide adoption.</li>
-</ul>
-
-<p>Example: Even with OpenAPI templates, developer teams need help to design APIs as much of their cognitive load is spent learning the intricacies of OpenAPI and ensuring their API designs meet the organizational standards.  The platform team builds tooling that reduces the designer’s exposure to OpenAPI and automates the design to adhere to the organization’s API standards.  Now, API designers only need to think about the use cases of the API and not additional tooling such as linters.  As more and more API designers use this tooling across the organization, the path is paved to move to Phase 3 - Optimizing.</p>
-
-<h3 id="phase-3---optimizing-or-the-holy-grail">Phase 3 - Optimizing or “The Holy Grail”</h3>
-
-<p>In the most mature phase, Optimizing, the platform becomes part of the larger development ecosystem and is a crucial differentiator for the organization.  Note the “-ing” at this phase; organizations never really leave this phase as they continue to evolve and iterate on their platform as new products and technical capabilities are introduced.</p>
-
-<p>Organizations in this phase provide self-service capabilities for developers. This gives the development team the autonomy to make decisions while providing the required organizational guardrails – security, compliance, costs, and standards.  This combination enables developers to focus on delivering innovation and business value as quickly as possible.</p>
-
-<p>The platform is instrumented for constant feedback and monitoring – the platform team understand the usage patterns and can quickly identify points of friction.  It’s these friction points that continue to evolve and make the platform more robust for the development teams.  This efficiency is realized in delightful experiences beyond ones just built for developers.  For instance, onboarding new users, customers, or partners – tasks that once took heroics and weeks or months of time – are now be automated with a push of a button.</p>
-
-<hr />
-
-<p>My next post will focus on getting executive buy-in for a Platform Engineering effort.  This is the most critical piece in this series, as tech is always the easy part, but getting buy-in and funding are the biggest challenges.</p>
-
-<p>Thank you for reading this far. I would love to hear from you about your experiences and where you think your organization sits on the maturity model. I would also like to discuss how you can move your organization forward.  What are some platform success stories? Failures?  My contact information is in the footer.</p>
-
-<hr />
-
-<blockquote>
-  <p><em>This post is part of <a href="https://matthewreinbold.github.io/APIFutures/index.html">APIFutures</a>, a community-led, collaborative effort to identify the top challenges and opportunities facing the API economy in 2024. For other perspectives, read the articles by different authors listed <a href="https://matthewreinbold.github.io/APIFutures/index.html">here</a>.</em></p>
-</blockquote>
-
-<p><a href="/">Home</a></p>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[This is the second post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In this post, we’ll dive into a Platform Engineering Maturity Model.]]></summary></entry></feed>
+</table>]]></content><author><name>Tim Maguire</name></author><summary type="html"><![CDATA[This is the thrid post in my Platform Engineering Paves the Path for API Management and Governance series. In the first post, I provided a high-level overview of Platform Engineering and how it can help API governance. In my second post, I shared a Platform Engineering Maturity Model. This post focuses on how a Platform Product Manager can get started building a Platform within an organization.]]></summary></entry></feed>

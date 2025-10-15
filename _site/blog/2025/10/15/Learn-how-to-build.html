@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Learn How I built an AI-powered API for Marketplace Taxonomy Automation | Tim Maguire</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Learn How I built an AI-powered API for Marketplace Taxonomy Automation" />
+<meta name="author" content="Tim Maguire" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In retail, product categorization is crucial. It directly impacts discoverability, conversion, and compliance by driving the required attributes in search facets. While rule-based systems might work in some verticals, marketplace taxonomies differ significantly, mappings drift over time, and edge cases multiply rapidly." />
+<meta property="og:description" content="In retail, product categorization is crucial. It directly impacts discoverability, conversion, and compliance by driving the required attributes in search facets. While rule-based systems might work in some verticals, marketplace taxonomies differ significantly, mappings drift over time, and edge cases multiply rapidly." />
+<link rel="canonical" href="http://localhost:4000/blog/2025/10/15/Learn-how-to-build.html" />
+<meta property="og:url" content="http://localhost:4000/blog/2025/10/15/Learn-how-to-build.html" />
+<meta property="og:site_name" content="Tim Maguire" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-15T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learn How I built an AI-powered API for Marketplace Taxonomy Automation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tim Maguire"},"dateModified":"2025-10-15T00:00:00-04:00","datePublished":"2025-10-15T00:00:00-04:00","description":"In retail, product categorization is crucial. It directly impacts discoverability, conversion, and compliance by driving the required attributes in search facets. While rule-based systems might work in some verticals, marketplace taxonomies differ significantly, mappings drift over time, and edge cases multiply rapidly.","headline":"Learn How I built an AI-powered API for Marketplace Taxonomy Automation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2025/10/15/Learn-how-to-build.html"},"url":"http://localhost:4000/blog/2025/10/15/Learn-how-to-build.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tim Maguire" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tim Maguire</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Timothy Maguire | API Product Manager | MBA</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Learn How I built an AI-powered API for Marketplace Taxonomy Automation</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-10-15T00:00:00-04:00" itemprop="datePublished">Oct 15, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Tim Maguire</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In retail, product categorization is crucial. It directly impacts discoverability, conversion, and compliance by driving the required attributes in search facets. While rule-based systems might work in some verticals, marketplace taxonomies differ significantly, mappings drift over time, and edge cases multiply rapidly.</p>
+
+<p>My client manages over 35,000 unique products distributed across 10 different marketplaces. Each marketplace has its own complex category taxonomy with thousands of categories. Their team was overwhelmed, spending hours daily copying and pasting product data between spreadsheets, manually creating products, and selecting multi-tiered categories for each product in each marketplace.</p>
+
+<p>This situation clearly needed automation. Fortunately, their inventory management system and all marketplaces offered robust APIs that simplified the initial automation process. I created a system to pull updated items daily and post them to the respective marketplaces. This worked smoothly when marketplace categories were known, but new products still required human intervention to assign appropriate categories, a task too complex for simple rule-based processing and perfect for an AI solution.</p>
+
+<p>I enhanced the pipeline with an AI-powered categorization layer after connecting the catalog and marketplace APIs. This layer analyzes raw product metadata (title, description, attributes, images), compares it against each marketplace taxonomy, and predicts the most appropriate leaf category. To maintain high accuracy, I implemented a human review step and guardrails for handling edge cases, balancing automation with necessary control.</p>
+
+<p>The results are impressive. What once required over 60 hours of manual work across the team of five, now takes minutes through a simple API call that returns suggested categories. The system scales effortlessly across their products and multiple marketplaces, remaining resilient against taxonomy changes and drift.</p>
+
+<p>I’ll share more details about this project, including API design, tools used (Flask, ChatGPT, Claude, Linnworks and Mirakl APIs, and LLM integration), and key lessons learned, in a <a href="https://maven.com/p/18bd3a/build-your-own-ai-powered-api-for-n8n"><strong>Lightning Lesson this October</strong></a>. If you’re interested in how AI and APIs can create smarter, faster marketplace integrations, join me live for the demonstration.</p>
+
+<p><a href="https://www.linkedin.com/in/tmaguire/">Tim Maguire</a> is a seasoned Product Manager specializing in APIs, AI integrations, and developer tools. He has led product management teams at leading API platforms such as SmartBear and RapidAPI, where he scaled developer ecosystems and launched governance and automation capabilities. Today, Tim builds intelligent API solutions that bridge commerce and AI, like the Retail Categorizer API you’ll see today, bringing efficiency and insight to complex data workflows. He’s passionate about using AI to make developer and business operations smarter, faster, and more consistent.</p>
+
+  </div><a class="u-url" href="/blog/2025/10/15/Learn-how-to-build.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tim Maguire</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tim Maguire</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fluffhead-tim"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fluffhead-tim</span></a></li><li><a href="https://www.linkedin.com/in/tmaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">tmaguire</span></a></li><li><a href="https://hachyderm.io/@TimMaguire"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">TimMaguire</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Tim Maguire&#39;s writing and thoughts on APIs.  Tim has been a Product Manager in the API space since 2018.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
